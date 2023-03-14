@@ -1,0 +1,96 @@
+.banquet-heading-content {
+  height: 120px;
+  background-color: rgb(107, 113, 113);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banquet-heading-content img {
+  margin-left: 20px;
+}
+
+.booking-description {
+  flex-grow: 1;
+  color: #e9b947;
+}
+
+.booking-description h2 {
+  font-size: 50px;
+  font-family: "Tangerine", "cursive";
+}
+
+.booking-description p {
+  font-size: 30px;
+  font-family: "Tangerine", "cursive";
+}
+
+.banquet-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.banquet-container h2 {
+  font-size: 40px;
+}
+
+.select-hall {
+  margin: 55px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select-hall h2 {
+  color: black;
+  text-align: start;
+}
+
+.hall-icon {
+  color: black;
+  font-size: 45px;
+}
+
+.banquet-container .banquet-content {
+  color: black;
+  max-width: 600px;
+}
+
+.banquet-content h2 {
+  color: #e9b947;
+  font-size: 60px;
+  font-family: "Tangerine", "cursive";
+  text-transform: uppercase;
+}
+
+.banquet-container img {
+  max-width: 400px;
+}
+
+.banquet-menu-btn {
+  background-color: #e9b947;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.banquet-image {
+  margin-bottom: 20px;
+  display: block;
+  height: 100px;
+  background: url("http://wahabali.com/work/pearl-demo/images/heading-dark.png")
+    no-repeat center;
+  color: black;
+}
