@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const registerSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+  },
   name: {
     type: String,
     trim: true,

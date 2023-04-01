@@ -1,0 +1,63 @@
+.contact-page-container {
+  height: 100vh;
+  background-image: url("../images/contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-page-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-page-heading h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.contact-page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-page-form input {
+  color: white;
+  width: 300px;
+  font-weight: 600;
+  margin: 20px 20px;
+  padding: 20px;
+  border: none;
+  text-align: center;
+  border-bottom: 3px solid rgb(164, 164, 164);
+  background-color: transparent;
+}
+
+.contact-page-form textarea {
+  color: white;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+
+  border-bottom: 3px solid rgb(164, 164, 164);
+}
+
+.contact-page-btn {
+  display: block;
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: red;
+}

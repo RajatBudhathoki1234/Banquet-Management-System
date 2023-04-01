@@ -1,6 +1,8 @@
 //Importing register schema from models folder.
 const registerModel = require("../models/register");
 
+const { v4: uuidv4 } = require("uuid");
+
 //Importing bcrypt to hash the password.
 const bcrypt = require("bcryptjs");
 
@@ -15,14 +17,17 @@ const register = async (req, res) => {
     //Destructuring the object.
     const { name, email, number, password } = req.body;
 
-    if (name && email && number && password) {
+    //Creating user id.
+    const uid = uuidv4();
+
+    if (name && email && number && password && uid) {
       //Hashing the password.
       const salt = await bcrypt.genSalt(10);
       const hash = await bcrypt.hash(password, salt);
 
       //Creating a token.
       const token = jwt.sign(
-        { name, email, number, password: hash },
+        { userId: uid, name, email, number, password: hash },
         "jwtsecret",
         {
           expiresIn: "120s",
@@ -105,7 +110,15 @@ const login = async (req, res) => {
 
     //If password matches.
     if (checkIfPassMatch) {
-      res.cookie("signedIn", true, { maxAge: 15000000, signed: true });
+      const checkEmail = await registerModel.findOne({ email });
+
+      //Destructuring the userId from database.
+      const { userId } = checkEmail;
+
+      res.cookie("signedIn", true, { maxAge: 150000000, signed: true });
+
+      res.cookie("userId", userId, { maxAge: 150000000, signed: true });
+
       return res.redirect(`http://localhost:3000/`);
     }
     //If not.
@@ -175,10 +188,10 @@ const sendResetPasswordLink = async (req, res) => {
 
 const checkLoginCookie = async (req, res) => {
   try {
-    const { signedIn } = req.signedCookies;
+    const { signedIn, userId } = req.signedCookies;
 
     if (signedIn === "true") {
-      return res.json({ success: true });
+      return res.json({ success: true, userId: userId });
     }
 
     res.json({ success: false });
@@ -190,6 +203,7 @@ const checkLoginCookie = async (req, res) => {
 const deleteLoginCookie = async (req, res) => {
   try {
     res.clearCookie("signedIn");
+    res.clearCookie("userId");
     res.json({ success: false });
   } catch (error) {
     console.log(error);

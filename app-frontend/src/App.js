@@ -7,6 +7,7 @@ import axios from "axios";
 import "./App.css";
 
 import {
+  Header,
   HomePage,
   About,
   Login,
@@ -17,16 +18,22 @@ import {
   CreateBanquet,
   DisplayBanquet,
   ChangePassword,
-  Header,
+  Menu,
+  DisplayMenu,
+  BookBanquet,
+  Contact,
 } from "./components";
 
 function App() {
   const [checkLogin, setCheckLogin] = useState(false);
 
+  const [userId, setUserid] = useState(null);
+
   const getCookies = async () => {
     try {
       const response = await axios.get("/api/checkLoginCookie");
       setCheckLogin(response.data.success);
+      setUserid(response.data.userId);
     } catch (error) {
       console.log(error);
     }
@@ -61,14 +68,22 @@ function App() {
           {/* if user is loged in then only this route exists*/}
           {checkLogin && (
             <>
-              <Route path="/banquet" element={<DisplayBanquet />}></Route>
+              <Route
+                path="/banquet"
+                element={<DisplayBanquet userId={userId} />}
+              ></Route>
               <Route path="/createBanquet" element={<CreateBanquet />}></Route>
+              <Route path="/menu/:id" element={<Menu />}></Route>
             </>
           )}
 
           <Route path="/gallery" element={<Gallery />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/forgetPass" element={<ForgetPass />}></Route>
+          <Route path="/DisplayMenu/:userId" element={<DisplayMenu />}></Route>
+          <Route path="/bookBanquet" element={<BookBanquet />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+
           <Route
             path="/changePassword/:id"
             element={<ChangePassword />}

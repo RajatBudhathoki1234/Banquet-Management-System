@@ -1,6 +1,12 @@
 const mongoose = require("mongoose");
 
 const banquetSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    trim: true,
+    required: [true, "Please provide user id"],
+  },
+
   banquet_name: {
     type: String,
     trim: true,

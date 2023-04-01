@@ -96,6 +96,12 @@
   font-size: xx-large;
 }
 
+.newsletter-form input {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .get-touch {
     flex-direction: column;

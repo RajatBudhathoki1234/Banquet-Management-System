@@ -126,9 +126,9 @@ function HomePage({ checkLogin }) {
                                             Create Banquet
                                         </button>
                                     </a>
-                                    <a href="banquet">
+                                    <a href="bookBanquet">
                                         <button className="bottom-banquet-btn show-banquet-btn">
-                                            Show Banquet
+                                            Book Banquet
                                         </button>
                                     </a>
 
