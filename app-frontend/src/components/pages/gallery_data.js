@@ -44,6 +44,41 @@ const galleryData = [
     image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
     description: "Firday Night Mar 17th",
   },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
+  {
+    id: 9,
+    image: "../images/gallery/pexels-tim-douglas-6210867.jpg",
+    description: "Firday Night Mar 17th",
+  },
 ];
 
 export default galleryData;

@@ -18,9 +18,9 @@ function Header({ checkLogin, deleteFun }) {
           <div className="links">
             <div className="logo">
               <img
-                src="http://wahabali.com/work/pearl-demo/images/logo2.png"
+                src={require("../images/dhido.png")}
                 alt=""
-                style={{ width: 200 }}
+                style={{ width: 130 }}
               />
             </div>
 

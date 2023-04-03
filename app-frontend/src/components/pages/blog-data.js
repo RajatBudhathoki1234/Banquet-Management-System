@@ -1,14 +1,13 @@
 const data = [
   {
     id: 1,
-    image: `https://miro.medium.com/v2/resize:fit:720/format:webp/1*vx6lxhzr32T5mIlI0tiRsg.jpeg`,
+    image: require("../images/gallery/2.jpg"),
     desc: "Home",
     auther: "Beatriz",
     read: "5 min read",
     postedDate: "7 hours ago",
-    title:
-      "How to Choose the Right TV Stand & Gaming Entertainment Center for Your Unique Space",
-    text: "Whether you’re wanting to update an existing room or you’re decorating a new space for the first time, choosing the right television stand can make or break a room. Today, we will discuss how to choose the right TV stand for your unique space, and we’ll explore a few of the options we have available. At , we have an extensive inventory of modern and midcentury modern TV stands, that are sure to beautifully transform your special TV room. A living room is, after all, the heart of a home. We spend most of our free hours gathered on the couch or sitting in front of our entertainment center. So why shouldn’t we put extra thought into our personal comfort and the kind of entertainment system we ideally need. Let’s explore our options, shall we",
+    title: "TAAJ PALACE",
+    text: "             A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions. Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.",
   },
   {
     id: 2,
@@ -16,9 +15,13 @@ const data = [
     auther: "Charles",
     read: "4 min read",
     postedDate: "1 day ago",
-    title: `The Medium Author Guide to Valentine’s Day: The Entertainment Earth’s Way`,
-    text: `This Valentine’s Day, let’s spread the love! 💖 Check out these collectible-inspired Valentine’s Day digital cards & toys for your love one!`,
-    image: `https://miro.medium.com/v2/resize:fit:720/format:webp/1*26Jle-xMoZORQoHEQvoKqA.jpeg`,
+    title: `Star Banquet`,
+    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
+
+    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
+    
+    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    image: require("../images/gallery/3.jpg"),
   },
   {
     id: 3,
@@ -26,10 +29,9 @@ const data = [
     auther: "Fatima",
     read: "9 min read",
     postedDate: "Feb 13",
-    title: "Modern card games have ancient roots",
-    text: "have been around for centuries, with some of the earliest known forms originating from China, Egypt and India. Over time, these ancient card games have evolved and developed into the modern-day versions we know and love today. From Poker to Bridge, Blackjack to Solitaire, , , , (D&D), & — all of them share a common ancestor in some form or another. For example, poker is believed to be derived from the French game Poque which was played in the 17th century, while Bridge is considered to be an evolution of Trick-taking games that date back as far as 16th century Europe. Of course, some aspects of these ancient card games are still present in their modern counterparts — such as bluffing during poker or bidding during Bridge. All this goes to show that although card games have changed over time, they’ve managed to keep some of their original roots intact even today.",
-    image:
-      "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Dsz4_7VhM5HPsIHyMqrg3g.jpeg",
+    title: "Smart Palace",
+    text: "A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.",
+    image: require("../images/gallery/4.jpg"),
   },
   {
     id: 4,
@@ -37,9 +39,13 @@ const data = [
     auther: "Gabriel",
     read: "8 min read",
     postedDate: "Feb 10",
-    title: `Really Cool Stuff for Your Really Cool Collection!`,
-    text: `If you’re a discerning collector who seeks the very best for your handpicked assemblage of special treasures, you’ve come to the right place! Here you’ll find premium high-quality items from fan-favorite movies, TV shows, video games, comics, and pop culture and some of the top manufacturers in the business. From the likes of Star Wars, The Hobbit / The Lord of the Rings, Batman, Game of Thrones, Alien/Aliens, Godzilla, and Harry Potter, come statues and busts, artwork, action figures, vinyl figures, and more from leading companies like Acme Archives, Weta Workshop, Anovos, Hollywood Collectibles Group, First 4 Figures, Gentle Giant, Medicom, and NECA. Our Really Cool Expensive Stuff is priced in excess of $200, and each piece is specifically chosen with the astute and discriminating connoisseur like you in mind.`,
-    image: `https://miro.medium.com/v2/resize:fit:720/format:webp/1*SUlyY6FRbhzG1UqrVHQWkg.jpeg`,
+    title: `Mystic Mountain`,
+    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
+
+    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
+    
+    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    image: require("../images/gallery/7.jpg"),
   },
   {
     id: 5,
@@ -47,27 +53,39 @@ const data = [
     auther: "Hanna",
     read: "3 min read",
     postedDate: "Feb 9",
-    title: `How to Buy A Modern Boutique Rugs for Outdoor, Bathroom, Kitchen, Living room & Bedroom`,
-    text: `When it comes to decorating your home, the floor is often the last thing you think about. But a rug can make all the difference in the look and feel of a room. How do you know which one to select for your home? Whether you’re looking for contemporary rugs, small area rugs, and carpets, this guide will help you make the best choice when it comes to finding Modern Boutique rugs.`,
-    image: `https://miro.medium.com/v2/resize:fit:640/format:webp/1*h0CsygklFoQ9CaxciMQhLw.jpeg`,
+    title: `Park Village Resort`,
+    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
+
+    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
+    
+    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    image: require("../images/gallery/8.jpg"),
   },
   {
     id: 6,
     desc: "Listen",
     read: "6 min read",
     postedDate: "Feb 6",
-    title: `5 Genius Ways to DIY a Coffee Bar at Home`,
-    text: `If you’re very passionate about coffee, then the idea of preparing your own coffee bar at home is very creative, and you do have all kinds of options to focus on. With that being said, there are always challenges when you try to go the DIY route. However, there are also plenty of products to bring your vision to life. With that in mind, here is a quick list of some items that we think are ideal to create a great coffee bar for your home.`,
-    image: `https://miro.medium.com/v2/resize:fit:640/format:webp/1*8z1kZgNFURuGgA9EtVFC7w.jpeg`,
+    title: `Hotel Yak & Yeti`,
+    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
+
+    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
+    
+    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    image: require("../images/gallery/9.jpg"),
   },
   {
     id: 7,
     desc: "Listen",
     read: "6 min read",
     postedDate: "Feb 6",
-    title: `Top 5 Gaming Room Setup Ideas On A Budget`,
-    text: `5 Top Gaming Room Setup Ideas You Should Keep In Mind For Your Next Project On A Budget From The gaming industry is one of the fastest-growing industries in the world. Statistics claim that setting up a pc costs around $800-$1200 on average. However, this cost can vary with the kind of accessories, options, and setup type that players want. Setting up the ideal room for gaming is just as important for most users. Unfortunately, most gamers do not have the budget to create the ideal gaming room setup. Therefore, we have lined out some ideas that will not hurt your wallet. You can incorporate these ideas for your gaming room setup, without spending too much out of your budget. Let us begin. Following are the top gaming room setup ideas you should keep in mind for your next project`,
-    image: `https://miro.medium.com/v2/resize:fit:720/format:webp/1*WMf59taREhfhIHwcEaDkvw.jpeg`,
+    title: `Chandragiri Resort`,
+    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
+
+    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
+    
+    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    image: require("../images/gallery/10.jpg"),
   },
 ];
 

@@ -60,7 +60,6 @@ function Footer() {
                 <h2>Saturday</h2>
                 <h2>Sunday</h2>
               </div>
-
               <div className="time">
                 <p>09am - 10pm</p>
                 <p>09am - 10pm</p>
@@ -74,15 +73,16 @@ function Footer() {
           </section>
           <section className="opening-hour">
             <div className="heading">
-              <h2>Instagram</h2>
+              <h2> Our Reach</h2>
             </div>
+
             <div className="content">
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
-              <img src={require("../images/blog-img.jpg")} alt="" width="100" />
+              <img src={require("../images/dhido.jpg")} alt="" width="100" />
+              <img src={require("../images/1a.png")} alt="" width="100" />
+              <img src={require("../images/1b.png")} alt="" width="100" />
+              <img src={require("../images/1c.png")} alt="" width="100" />
+              <img src={require("../images/1d.png")} alt="" width="100" />
+              <img src={require("../images/1e.png")} alt="" width="100" />
             </div>
           </section>
         </div>
@@ -91,12 +91,20 @@ function Footer() {
           <div className="heading">
             <h2>About Banquet</h2>
           </div>
+
           <div className="footer-content">
             <p>
-              PEARL is an Lorem ipsum porta placerat rutrum aliquet platea
-              accumsan, molestie eros aliquet adipiscing egestas ultrices, leo
-              convallis dolor nisl integer potenti fringilla aenean condimentum
-              ipsum maecenas aliquet consectetur.
+              A banquet is a formal event usually held to celebrate a particular
+              occasion or to recognize a significant achievement. It involves a
+              sit-down meal and can be hosted at various locations such as
+              hotels, conference centers, and restaurants. Banquets can range
+              from intimate gatherings of a few people to large-scale events
+              with hundreds of attendees. Typically, the banquet planning
+              process includes selecting a venue, determining a guest list,
+              choosing a menu, arranging for decor and entertainment, and
+              coordinating logistics such as transportation and parking. The
+              success of a banquet largely depends on the attention to detail
+              and thorough planning.
             </p>
           </div>
         </div>
@@ -130,6 +138,7 @@ function Footer() {
                 id="email"
                 placeholder="Enter your e-mail address"
               />
+              <button> Send </button>
             </div>
           </div>
         </div>
@@ -141,5 +150,4 @@ function Footer() {
     </footer>
   );
 }
-
 export default Footer;
