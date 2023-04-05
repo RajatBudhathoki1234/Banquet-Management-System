@@ -30,7 +30,7 @@ function Header({ checkLogin, deleteFun }) {
                 Home
               </a>
               <a href="banquet" className="link">
-                <i className="fa-solid fa-champagne-glasses"></i> Banquet
+                <i className="fa-solid fa-champagne-glasses"></i> Banquets
               </a>
 
               <a href="blog" className="link">
@@ -47,7 +47,7 @@ function Header({ checkLogin, deleteFun }) {
               </a>
               <a href="contact" className="link">
                 <i className="fa fa-question-circle"></i>
-                Contact
+                Contact Us
               </a>
 
               {!checkLogin && (

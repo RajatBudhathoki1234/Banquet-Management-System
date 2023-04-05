@@ -1,39 +1,35 @@
 const people = [
   {
     id: 1,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg",
-    name: "maria ferguson",
-    title: "office manager",
+    image: require("../images/rabi.png"),
+    name: "Rabi Lamcichanne",
+    title: "Office Manager",
     quote:
-      "Fingerstache umami squid, kinfolk subway tile selvage tumblr man braid viral kombucha gentrify fanny pack raclette pok pok mustache.",
+      "The staff at this banquet went above and beyond to make sure our event was a success. From the moment we walked in, we were greeted with a warm welcome and excellent service. The food was delicious and the attention to detail was impressive. Thank you for making our experience so memorable!",
   },
   {
     id: 2,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-    name: "john doe",
-    title: "regular guy",
+    image: require("../images/full.jpg"),
+    name: "Prachanda",
+    title: "Photographer",
     quote:
-      "Gastropub sustainable tousled prism occupy. Viral XOXO roof party brunch actually, chambray listicle microdosing put a bird on it paleo subway tile squid umami.",
+      "I was extremely impressed by the level of service and hospitality at this banquet. The staff were friendly and attentive, and they made sure that all of our needs were met. The food was also exceptional, and the presentation was stunning. I would highly recommend this venue to anyone looking for a top-notch banquet experience.",
   },
   {
     id: 3,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
-    name: "peter smith",
-    title: "product designer",
+    image: require("../images/Sher.jpg"),
+    name: "Sher Bahadur Deuba",
+    title: "Fashion Designer",
     quote:
-      "Drinking vinegar polaroid street art echo park, actually semiotics next level butcher master cleanse hammock flexitarian ethical paleo.",
+      "What a wonderful experience we had at this banquet! The service was impeccable and the staff were so friendly and helpful. The food was absolutely delicious, and we were treated like royalty throughout the entire event. Thank you for making our special occasion even more memorable.",
   },
   {
     id: 4,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "susan andersen",
-    title: "the boss",
+    image: require("../images/Sobita-Gautam-1.jpg"),
+    name: "Sobita Gautam",
+    title: "Journalist ",
     quote:
-      "Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ",
+      "We had such a great time at this banquet! The service was outstanding and the hospitality was second to none. The staff were so accommodating and made sure that all of our guests were well taken care of. The food was also amazing, and everyone raved about how delicious it was. We would definitely come back here again! ",
   },
 ];
 

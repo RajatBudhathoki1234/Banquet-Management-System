@@ -30,19 +30,24 @@ function Footer() {
               <h2>Contact Us</h2>
             </div>
             <div className="footer-content">
-              <p id="margin-btm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean
-                ac.
+              <p id="margin-btm">Reach us via Different Medias</p>
+              <p>
+                <BsFillTelephoneForwardFill /> +977 9843660087
               </p>
               <p>
-                <BsFillTelephoneForwardFill /> +977 982312132
+                <AiFillMail /> budhathokirajat31@gmail.com
               </p>
               <p>
-                <AiFillMail /> test@gmail.com
+                <AiFillHome /> Gokarna-8, Kathmandu
               </p>
               <p>
-                <AiFillHome /> 329 Queensberry Street, North Me bourne,
-                Australia.
+                <AiFillInstagram /> Banquet_Bihey
+              </p>
+              <p>
+                <AiFillFacebook /> wwww.facebook.com/BanquetBihey
+              </p>
+              <p>
+                <AiOutlineWhatsApp /> +977- 98090755785
               </p>
             </div>
           </section>
@@ -144,7 +149,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright-footer">
-        <p>Copyright © 2016 Pearl Hotel. All rights reserved. by Brighthemes</p>
+        <p>Copyright © 2023 Bihey_Banquet All rights reserved. by NEPALI AI </p>
         <p>Permissions and Copyrights - Contact Us </p>
       </div>
     </footer>
