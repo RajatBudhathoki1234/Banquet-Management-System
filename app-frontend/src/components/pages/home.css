@@ -330,7 +330,7 @@ body {
 */
 
 .third-section {
-  height: 400px;
+  height: 600px;
   background: rgba(188, 179, 88, 1);
   display: flex;
   flex-direction: row-reverse;

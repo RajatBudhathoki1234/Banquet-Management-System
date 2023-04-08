@@ -14,18 +14,17 @@ const createBanquet = async (req, res) => {
     const { name, desc } = req.body;
     const { path } = req.file;
 
-    const findUserIdExists = await banquetModel.find({
-      userId: req.signedCookies.userId,
-    });
+    const findUserIdExists = await banquetModel
+      .find({
+        userId: req.signedCookies.userId,
+      })
+      .count();
 
-    console.log(findUserIdExists.length);
-
-    if (!findUserIdExists) {
+    if (findUserIdExists > 0) {
       return res.send("you have created the banquet already");
     }
 
     if (path) {
-      console.log(path);
       const splitedData = path.split("\\");
       const newPath = splitedData[5];
       if (name && desc) {

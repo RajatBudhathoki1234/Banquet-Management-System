@@ -18,11 +18,10 @@ const Gallery = () => {
             const { id, image, description } = item;
             return (
               <article className="gallery-image" data-aos="zoom-in" key={id}>
-                {/* <img
+                <img
                   src={require("../images/gallery/pexels-cottonbro-studio-6718617.jpg")}
                   alt=""
-                /> */}
-                <img src={image} alt="" />
+                />
                 <h2>{description}</h2>
               </article>
             );

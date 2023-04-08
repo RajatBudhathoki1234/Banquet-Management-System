@@ -1,13 +1,15 @@
 const mongoose = require("mongoose");
 
-const menuSchema = mongoose.Schema({
-  userId: {
+const bookNowSchema = mongoose.Schema({
+  bookUserId: {
+    type: String,
+  },
+  shift: {
     type: String,
     trim: true,
-    required: [true, "Please provide user id"],
+    required: [true, "Please provide shift"],
   },
-
-  breakfast: [
+  date: [
     {
       type: String,
       trim: true,
@@ -15,7 +17,7 @@ const menuSchema = mongoose.Schema({
     },
   ],
 
-  dinner: [
+  guest: [
     {
       type: String,
       trim: true,
@@ -23,19 +25,13 @@ const menuSchema = mongoose.Schema({
     },
   ],
 
-  desert: [
+  type: [
     {
       type: String,
       trim: true,
       required: [true, "Please provide desert"],
     },
   ],
-
-  price: {
-    type: Number,
-    trim: true,
-    required: [true, "product name must be provided"],
-  },
 });
 
-module.exports = mongoose.model("Create Menu", menuSchema);
+module.exports = mongoose.model("bookedNow", bookNowSchema);

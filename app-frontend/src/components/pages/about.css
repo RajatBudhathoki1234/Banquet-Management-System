@@ -184,9 +184,11 @@ body {
 }
 
 .team-container {
-  width: 60%;
+  width: 90%;
   margin: 0px auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
 }

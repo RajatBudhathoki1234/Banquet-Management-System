@@ -36,6 +36,12 @@ const menu = require("./routes/menu");
 //Importing book.js file from routes folder.
 const book = require("./routes/book");
 
+//Importing bookNow.js file from routes folder.
+const bookNow = require("./routes/bookNow");
+
+//Importing contact.js file from routes folder.
+const contact = require("./routes/contact");
+
 //Acceping the incomming request object as a json object.
 app.use(express.json());
 
@@ -55,6 +61,12 @@ app.use("/", menu);
 //Initializing all the routes from book.js as a midddleware in the server.
 app.use("/", book);
 
+//Initializing all the routes from contact.js as a midddleware in the server.
+app.use("/", contact);
+
+//Initializing all the routes from bookNow.js as a midddleware in the server.
+app.use("/", bookNow);
+
 //Initializing all the routes from banquet.js as a midddleware in the server.
 app.use("/", upload.single("image"), banquet);
 
@@ -64,6 +76,12 @@ const connectDB = require("./db/connect");
 //Importing dotenv and configuring the dotenv in the project.
 require("dotenv").config();
 
+const AdminBro = require("admin-bro");
+const AdminBroExpress = require("@admin-bro/express");
+const AdminBroMongoose = require("@admin-bro/mongoose");
+const mongoose = require("mongoose");
+AdminBro.registerAdapter(AdminBroMongoose);
+
 //Initializing the port value.
 const port = 8000 || process.env.PORT;
 
@@ -71,7 +89,23 @@ const port = 8000 || process.env.PORT;
 const start = async () => {
   try {
     //Connecting to the server.
+    mongoose.set("strictQuery", false);
+    const mongooseDb = await mongoose.connect(
+      "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1",
+      { useNewUrlParser: true }
+    );
+
     await connectDB(process.env.MONGO_URL);
+
+    const adminBro = new AdminBro({
+      databases: [mongooseDb],
+      rootPath: "/admin",
+    });
+
+    const router = AdminBroExpress.buildRouter(adminBro);
+
+    app.use(adminBro.options.rootPath, router);
+
     //Starting the server on port 8000.
     app.listen(port, () => {
       console.log(`Listening to ${port}`);

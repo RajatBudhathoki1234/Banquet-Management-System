@@ -8,7 +8,7 @@ export { default as BookBanquet } from "./banquet/bookBanquet";
 export { default as Contact } from "./pages/contact";
 export { default as Gallery } from "./pages/gallery";
 export { default as Menu } from "./pages/menu";
-export { default as Footer } from "./footer/Footer.jsx";
+export { default as Footer } from "./footer/Footer";
 export { default as Header } from "./navBar/Header";
 export { default as Login } from "./login-register/login";
 export { default as Register } from "./login-register/register";

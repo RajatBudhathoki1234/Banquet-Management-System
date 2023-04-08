@@ -119,10 +119,10 @@ const login = async (req, res) => {
 
       res.cookie("userId", userId, { maxAge: 150000000, signed: true });
 
-      return res.redirect(`http://localhost:3000/`);
+      return res.send("sucess");
     }
     //If not.
-    return res.send("Sorry can't login");
+    return res.send("unsucessful");
   } catch (error) {
     console.log(error);
   }

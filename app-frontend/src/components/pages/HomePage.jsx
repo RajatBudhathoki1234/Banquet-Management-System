@@ -153,7 +153,7 @@ function HomePage({ checkLogin }) {
           <section className="second-section " data-aos="fade-down">
             <section className="banquet-info ">
               <section className="heading-info ">
-                <h1 id="heading-h1">WELCOME</h1>
+                <h1 id="heading-h1">WELCOME </h1>
                 <p>
                   Beyond the hustle and bustle of the city, we provide our one
                   stop party venue services in a serene family location,
@@ -174,11 +174,11 @@ function HomePage({ checkLogin }) {
                       ABOUT OUR BANQUET SYSTEM
                     </h2>
                     <p>
-                      At Our Banquet, we plan to make your event, worry free and
-                      fun. Take the stress of planning your special event off
-                      your shoulders by selecting the level of assistance you
-                      want. When it comes to managing and catering your own
-                      event, our team of expertise...
+                      At Our Banquet System, we plan to make your event, worry
+                      free and fun. Take the stress of planning your special
+                      event off your shoulders by selecting the level of
+                      assistance you want. When it comes to managing and
+                      catering your own event, our team of expertise...
                     </p>
                     <div className="about-link">
                       <a href="about">
@@ -195,7 +195,7 @@ function HomePage({ checkLogin }) {
                   <section className="choose-item banquet-item">
                     <h2>
                       <i className="fa-solid fa-clipboard"></i>
-                      WHY CHOOSE OUR SYSTEM?
+                      WHY CHOOSE OUR BANQUET SYSTEM
                     </h2>
                     <p>
                       At Our Banquet System, we plan to make your event, worry
@@ -220,7 +220,7 @@ function HomePage({ checkLogin }) {
               </section>
             </section>
             <section className="heading-img">
-              <img src={require("../images/buddha.jpg")} alt="buddha " />
+              <img src={require("../images/s3.jpg")} alt="buddha " />
             </section>
           </section>
           {/* End of second section */}
@@ -328,10 +328,10 @@ function HomePage({ checkLogin }) {
                   <div className="contact-text">
                     <h2>address</h2>
                     <p>
-                      soalteemode, rabibhawan, <br />
-                      Ganeshman Sign Rd,
+                      Attarkhel,Gokarneshwor <br />
+                      Kathmandu,
                       <br />
-                      Kathmandu
+                      Nepal
                     </p>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ function HomePage({ checkLogin }) {
                   </div>
                   <div className="contact-text">
                     <h2>telephone</h2>
-                    <p>92130213213</p>
+                    <p>9843660087</p>
                   </div>
                 </div>
                 <div
@@ -368,7 +368,7 @@ function HomePage({ checkLogin }) {
                     <p>
                       <i className="fa-solid fa-globe"></i>
                       <br />
-                      www.abcposadmasd.com.np
+                      www.rajatbudhathoki.com.np
                     </p>
                   </div>
                 </div>

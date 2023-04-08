@@ -70,6 +70,12 @@ body {
   color: rgb(255, 174, 174);
 }
 
+.menu-container .menu-btn {
+  font-size: 25px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 .menu-container {
   visibility: hidden;
 }
@@ -85,30 +91,44 @@ body {
 *End of nav section
 */
 
-/* @media screen and (max-width: 1380px) {
+@media screen and (max-width: 1200px) {
   .nav-container {
-    height: max-content;
-    width: fit-content;
+    position: relative;
+    background-color: black;
   }
-  .logo {
-    display: none;
+
+  .changePostion {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+  }
+
+  .links .logo {
+    visibility: hidden;
   }
 
   .menu-container {
     visibility: visible;
   }
 
-  .menu-icon {
-    font-size: 30px;
+  .link-container {
+    visibility: hidden;
+  }
+
+  .show-links {
+    visibility: visible;
   }
 
   .links {
-    width: cover;
+    justify-content: flex-start;
+    height: fit-content;
   }
 
   .link-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 1.5rem;
   }
-} */
+}

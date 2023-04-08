@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/mongoose": "^1.1.0",
+    "@adminjs/express": "^5.1.0",
+    "@adminjs/mongoose": "^3.0.3",
+    "admin-bro": "^4.0.1",
+    "adminjs": "^6.8.7",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",

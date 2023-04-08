@@ -70,8 +70,7 @@ const Register = () => {
                   </button>
                 </div>
                 <div className="forget-pass">
-                  <a href="login">Already have an account?</a>
-                  <a href="login" className="margin-bottom"></a>
+                  <a href="login">Already have an account. Sign in?</a>
                 </div>
               </form>
               {/* <!--End of form section--> */}

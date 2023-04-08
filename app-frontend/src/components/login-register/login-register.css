@@ -125,9 +125,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  gap: 1rem;
 }
 
 .forget-pass a {
@@ -138,6 +136,11 @@ body {
 
 .register-form #reset-pass {
   margin-left: 0px;
+}
+
+.error-message p {
+  color: red;
+  font-weight: 400;
 }
 
 .card-design {

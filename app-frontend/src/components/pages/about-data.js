@@ -23,6 +23,18 @@ const team = [
     position: "HR Manager",
     desc: "As your HR Manager, I wanted to take a moment to remind you of the importance of taking care of yourselves and each other. Our well-being is critical to our ability to perform at our best, and I encourage you to prioritize self-care and balance in your daily routines.",
   },
+  {
+    id: 5,
+    name: "Abhishek Pandit",
+    position: "HR Manager",
+    desc: "As your HR Manager, I wanted to take a moment to remind you of the importance of taking care of yourselves and each other. Our well-being is critical to our ability to perform at our best, and I encourage you to prioritize self-care and balance in your daily routines.",
+  },
+  {
+    id: 6,
+    name: "Abhishek Pandit",
+    position: "HR Manager",
+    desc: "As your HR Manager, I wanted to take a moment to remind you of the importance of taking care of yourselves and each other. Our well-being is critical to our ability to perform at our best, and I encourage you to prioritize self-care and balance in your daily routines.",
+  },
 ];
 
 export default team;

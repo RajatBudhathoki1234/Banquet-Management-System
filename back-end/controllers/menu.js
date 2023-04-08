@@ -3,15 +3,16 @@ const menuSchema = require("../models/menu");
 const createMenu = async (req, res) => {
   try {
     const [breakfast, dinner, desert, price] = req.body.menu;
-    console.log(req.body);
 
-    // const findUserIdExists = await menuSchema.find({
-    //   userId: req.signedCookies.userId,
-    // });
+    const findUserIdExists = await menuSchema
+      .find({
+        userId: req.signedCookies.userId,
+      })
+      .count();
 
-    // if (findUserIdExists) {
-    //   return res.json("you have created menu already");
-    // }
+    if (findUserIdExists > 0) {
+      return res.send("you have created menu already");
+    }
 
     await menuSchema.create({
       userId: req.signedCookies.userId,
@@ -20,8 +21,6 @@ const createMenu = async (req, res) => {
       desert,
       price,
     });
-    console.log("hello");
-
     res.status(200).json("Sucess");
   } catch (error) {
     console.log(error);
