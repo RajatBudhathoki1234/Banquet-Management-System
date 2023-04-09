@@ -4,7 +4,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .book-banquet-heading h2 {
@@ -57,24 +56,4 @@
   cursor: pointer;
   text-transform: uppercase;
   background-color: rgb(166, 145, 110);
-}
-
-.sucess-pop-up {
-  width: 250px;
-  position: absolute;
-  bottom: 5%;
-  left: 40%;
-}
-
-.pop-up-message {
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: rgb(246, 252, 159);
-  display: flex;
-  justify-content: center;
-}
-
-.pop-up-message p {
-  color: rgb(136, 136, 136);
-  font-weight: 600;
 }

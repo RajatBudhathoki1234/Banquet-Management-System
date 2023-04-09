@@ -133,19 +133,6 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div className="newsLetter">
-            <div className="heading">
-              <h2>Newsletter</h2>
-            </div>
-            <div className="newsletter-form">
-              <input
-                className="email"
-                id="email"
-                placeholder="Enter your e-mail address"
-              />
-              <button> Send </button>
-            </div>
-          </div>
         </div>
       </div>
       <div className="copyright-footer">
