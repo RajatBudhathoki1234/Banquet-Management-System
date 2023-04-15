@@ -61,6 +61,7 @@
 .banquet-container .banquet-content {
   color: black;
   max-width: 600px;
+  flex-basis: 30%;
 }
 
 .banquet-content h2 {
@@ -93,4 +94,16 @@
   background: url("http://wahabali.com/work/pearl-demo/images/heading-dark.png")
     no-repeat center;
   color: black;
+}
+
+.display-banquet-container .search-banquet-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .search-banquet-form {
+    flex-direction: column;
+  }
 }

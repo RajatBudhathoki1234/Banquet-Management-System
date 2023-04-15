@@ -3,12 +3,24 @@ const express = require("express");
 const router = express.Router();
 
 //Importing functions from banquet.js.
-const { getBanquet, createBanquet } = require("../controllers/banquet");
+const {
+  getBanquet,
+  createBanquet,
+  filterBanquetName,
+  filterBanquetLocation,
+  filterBanquetPrice,
+} = require("../controllers/banquet");
 
 //Creating HTTP request methods with express router.
 router.route("/api/createBanquet").post(createBanquet);
 
 router.route("/api/getBanquet").get(getBanquet);
+
+router.route("/api/filterBanquetName/:name").get(filterBanquetName);
+
+router.route("/api/filterBanquetLocation/:name").get(filterBanquetLocation);
+
+router.route("/api/filterBanquetPrice/:range").get(filterBanquetPrice);
 
 //Exporting router.
 module.exports = router;

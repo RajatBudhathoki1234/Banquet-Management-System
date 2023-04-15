@@ -75,6 +75,7 @@ function Header({ checkLogin, deleteFun }) {
                       deleteFun();
                     }}
                   >
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Logout
                   </button>
                 </>

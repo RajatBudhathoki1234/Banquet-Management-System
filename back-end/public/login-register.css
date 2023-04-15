@@ -242,7 +242,7 @@ input {
 .footer-content {
   color: white;
   height: 400px;
-  background: url("./images/footer.png");
+  /* background: url("./images/footer.png"); */
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;

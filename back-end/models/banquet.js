@@ -17,6 +17,16 @@ const banquetSchema = new mongoose.Schema({
     trim: true,
     required: [true, "Please provide email"],
   },
+  banquet_location: {
+    type: String,
+    trim: true,
+    required: [true, "Please provide banquet location"],
+  },
+  banquet_price: {
+    type: String,
+    trim: true,
+    required: [true, "Please provide banquet price"],
+  },
   image_location: {
     type: String,
     trim: true,

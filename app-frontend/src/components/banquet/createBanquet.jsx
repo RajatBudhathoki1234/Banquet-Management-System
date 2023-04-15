@@ -24,6 +24,16 @@ function Banquet() {
                     placeholder="Banquet Name"
                   />
                 </div>
+
+                <div className="email-field">
+                  <input
+                    type="price"
+                    id="price"
+                    name="price"
+                    placeholder="Price Per Plate"
+                  />
+                </div>
+
                 <div className="password-field">
                   <textarea
                     type="desc"
@@ -32,6 +42,18 @@ function Banquet() {
                     placeholder="Description"
                   />
                 </div>
+
+                <div className="location-field" style={{ margin: "20px 50px" }}>
+                  <select name="location">
+                    <option value="" disabled selected>
+                      Location
+                    </option>
+                    <option value="Kathmandu">Kathmandu</option>
+                    <option value="Butwal">Butwal</option>
+                    <option value="Janakpur">Janakpur</option>
+                  </select>
+                </div>
+
                 <div className="image-field">
                   <input
                     type="file"

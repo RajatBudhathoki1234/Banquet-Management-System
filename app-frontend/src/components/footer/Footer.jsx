@@ -1,7 +1,5 @@
 import React from "react";
-
 import { BsFillTelephoneForwardFill } from "react-icons/bs";
-
 import {
   AiFillMail,
   AiFillHome,
@@ -135,10 +133,63 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="copyright-footer">
+      <div className="footer-content-last">
+        <section className="footer-left">
+          {/* <i
+            class="fa-brands fa-square-pied-piper"
+            style="font-size: 100px"
+          ></i> */}
+          <img src={require("../images/dhido.jpg")} alt="" width="100" />
+          <p>
+            A banquet is a formal event usually held to celebrate a particular
+            occasion or to recognize a significant achievement. It involves a
+            sit-down meal and can be hosted at various locations such as hotels,
+            conference centers, and restaurants. Banquets can range from
+            intimate gatherings of a few people to large-scale events with
+            hundreds of attendees
+          </p>
+          <a href="www.facebook.com">
+            <img src="../images/Facebook_Logo.png.webp" alt="" width="100" />
+          </a>
+          <a href="www.instagram.com">
+            <img
+              src="../images/Instagram_logo_2016.svg.webp"
+              alt=""
+              width="100"
+            />
+          </a>
+          <a href="www.twitter.com">
+            <img
+              class="twitter"
+              src="../images/twitter.png"
+              alt=""
+              width="100"
+            />
+          </a>
+        </section>
+        <section className="footer-right">
+          <section className="footer-links">
+            <a href="/">Home </a>
+            <a href="about">About Us </a>
+            <a href="blog">Blog </a>
+            <a href="gallery">Our Gallery </a>
+            <a href="contact">Contact </a>
+            <br />
+          </section>
+          <section className="footer-text">
+            <p>
+              Reach Us
+              <br />
+              ----------------------------------------
+            </p>
+            <p className="small-text">Powered by: Razat.Lab.Pvt.Ltd</p>
+          </section>
+        </section>
+      </div>
+      {/* <div className="copyright-footer">
         <p>Copyright © 2023 Bihey_Banquet All rights reserved. by NEPALI AI </p>
         <p>Permissions and Copyrights - Contact Us </p>
-      </div>
+      </div> */}
     </footer>
   );
 }

@@ -316,7 +316,7 @@ body {
 .heading-img img {
   position: relative;
   max-height: 680px;
-  min-width: 500px;
+  max-width: 600px;
   z-index: 0;
   opacity: 0.8;
 }
@@ -609,7 +609,7 @@ iframe {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .heading-img {
     display: none;
   }
