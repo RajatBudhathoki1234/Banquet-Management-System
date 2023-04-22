@@ -57,6 +57,7 @@ function Banquet() {
                     </option>
                     <option value="Kathmandu">Kathmandu</option>
                     <option value="Butwal">Butwal</option>
+                    <option value="Dhulikhel">Dhulikhel</option>
                     <option value="Janakpur">Janakpur</option>
                     <option value="Hetauda">Hetauda</option>
                     <option value="Chitwan">Chitwan</option>
