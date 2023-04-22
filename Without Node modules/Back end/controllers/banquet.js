@@ -16,7 +16,7 @@ const createBanquet = async (req, res) => {
   try {
     //Destructing the objects.
     const { name, desc, location, price } = req.body;
-
+    const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     const { path } = req.file;
 
     console.log(path);
@@ -29,7 +29,7 @@ const createBanquet = async (req, res) => {
         const token = jwt.sign(
           {
             userId: req.signedCookies.userId,
-            banquet_name: name,
+            banquet_name: newName,
             banquet_description: desc,
             banquet_location: location,
             banquet_price: price,
@@ -52,8 +52,10 @@ const createBanquet = async (req, res) => {
 const filterBanquetName = async (req, res) => {
   try {
     const { name } = req.params;
+    const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    console.log(newName);
     const getBanquetName = await banquetModel.find({
-      banquet_name: { $regex: name },
+      banquet_name: { $regex: newName },
     });
     if (getBanquetName.length === 0) {
       return res.send("unsucessful");
@@ -98,6 +100,25 @@ const filterBanquetPrice = async (req, res) => {
     console.log(error);
   }
 };
+const filterbanquetAsc = async (req, res) => {
+  try {
+    const { range } = req.params;
+    console.log(range);
+    const getBanquetRange = await banquetModel
+      .find({
+        banquet_price: { $gte: 0 },
+      })
+      .sort({ banquet_price: 0 });
+
+    // console.log(getBanquetRange);
+    if (getBanquetRange.length === 0) {
+      return res.send("unsucessful");
+    }
+    res.json(getBanquetRange);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 module.exports = {
   getBanquet,
@@ -105,4 +126,5 @@ module.exports = {
   filterBanquetName,
   filterBanquetLocation,
   filterBanquetPrice,
+  filterbanquetAsc,
 };

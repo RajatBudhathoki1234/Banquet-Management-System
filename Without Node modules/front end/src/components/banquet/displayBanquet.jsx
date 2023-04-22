@@ -29,7 +29,14 @@ const DisplayBanquet = ({ userId }) => {
   const [noDataFound, setNoDataFound] = useState(false);
 
   const [range, setRange] = useState([100, 1000]);
-
+  // const handleAscending = async () => {
+  //   const response = await axios.get(`/api/filterbanquetAsc/${0}`);
+  //   if (response.data === "unsucessful") {
+  //     setNoDataFound(true);
+  //     return;
+  //   }
+  //   setBanquetData(response.data);
+  // };
   async function handleChanges(event, newValue) {
     setRange(newValue);
     setNoDataFound(false);
@@ -80,7 +87,7 @@ const DisplayBanquet = ({ userId }) => {
   const handleSearchBanquet = async (e) => {
     e.preventDefault();
     const response = await axios.get(
-      `api/filterBanquetName/${searchBanquetValue}`
+      `/api/filterBanquetName/${searchBanquetValue}`
     );
     if (response.data === "unsucessful") {
       setNoDataFound(true);
@@ -193,6 +200,14 @@ const DisplayBanquet = ({ userId }) => {
               )}
             </div>
           </div>
+          {/* <button
+            type="submit"
+            onClick={() => {
+              handleAscending();
+            }}
+          >
+            Sort Ascending
+          </button> */}
 
           {!noDataFound &&
             banquetData.map((item) => {

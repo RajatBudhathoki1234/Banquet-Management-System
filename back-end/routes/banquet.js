@@ -9,6 +9,7 @@ const {
   filterBanquetName,
   filterBanquetLocation,
   filterBanquetPrice,
+  filterbanquetAsc,
 } = require("../controllers/banquet");
 
 //Creating HTTP request methods with express router.
@@ -21,6 +22,6 @@ router.route("/api/filterBanquetName/:name").get(filterBanquetName);
 router.route("/api/filterBanquetLocation/:name").get(filterBanquetLocation);
 
 router.route("/api/filterBanquetPrice/:range").get(filterBanquetPrice);
-
+router.route("/api/filterbanquetAsc/:range").get(filterbanquetAsc);
 //Exporting router.
 module.exports = router;
