@@ -95,6 +95,14 @@ const DisplayBanquet = ({ userId }) => {
     }
     setBanquetData(response.data);
   };
+  const sortAscending = async () => {
+    const response = await axios.get(`/api/filterBanquetAscending`);
+    setBanquetData(response.data);
+  };
+  const sortDescending = async () => {
+    const response = await axios.get(`/api/filterBanquetDescending`);
+    setBanquetData(response.data);
+  };
 
   useEffect(() => {
     fetchData();
@@ -198,6 +206,24 @@ const DisplayBanquet = ({ userId }) => {
                   The selected range is {range[0]} - {range[1]}
                 </p>
               )}
+            </div>
+            <div className="button-asc-desc">
+              <button
+                type="submit"
+                onClick={() => {
+                  sortAscending();
+                }}
+              >
+                Sort Ascending
+              </button>
+              <button
+                type="submit"
+                onClick={() => {
+                  sortDescending();
+                }}
+              >
+                Sort Descending
+              </button>
             </div>
           </div>
           {/* <button

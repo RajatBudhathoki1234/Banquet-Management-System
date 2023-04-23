@@ -100,16 +100,26 @@ const filterBanquetPrice = async (req, res) => {
     console.log(error);
   }
 };
-const filterbanquetAsc = async (req, res) => {
+const filterBanquetAscending = async (req, res) => {
   try {
-    const { range } = req.params;
-    console.log(range);
-    const getBanquetRange = await banquetModel
-      .find({
-        banquet_price: { $gte: 0 },
-      })
-      .sort({ banquet_price: 0 });
+    const getBanquetRange = await banquetModel.aggregate([
+      { $sort: { banquet_price: 1 } },
+    ]);
+    if (getBanquetRange.length === 0) {
+      return res.send("unsucessful");
+    }
+    console.log(getBanquetRange);
+    res.json(getBanquetRange);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+const filterBanquetDescending = async (req, res) => {
+  try {
+    const getBanquetRange = await banquetModel.aggregate([
+      { $sort: { banquet_price: -1 } },
+    ]);
     // console.log(getBanquetRange);
     if (getBanquetRange.length === 0) {
       return res.send("unsucessful");
@@ -126,5 +136,6 @@ module.exports = {
   filterBanquetName,
   filterBanquetLocation,
   filterBanquetPrice,
-  filterbanquetAsc,
+  filterBanquetAscending,
+  filterBanquetDescending,
 };
