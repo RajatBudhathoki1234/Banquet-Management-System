@@ -183,7 +183,7 @@ function Footer() {
               ----------------------------------------
             </p>
             <p className="small-text">
-              Copyright © 2023 Bihey_Banquet, All rights reserved
+              Copyright © 2022 Bihey_Banquet, All rights reserved
             </p>
           </section>
         </section>
