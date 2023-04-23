@@ -6,7 +6,11 @@ const bookedSchema = mongoose.Schema({
     trim: true,
     required: [true, "Please provide user id"],
   },
-
+  banquetName: {
+    type: String,
+    trim: true,
+    required: [true, "Please provide user id"],
+  },
   shift: {
     type: String,
     trim: true,

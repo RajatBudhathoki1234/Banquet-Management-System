@@ -264,7 +264,7 @@ const DisplayBanquet = ({ userId }) => {
                       <strong>Price: </strong>
                       {banquet_price}
                     </p>
-                    <a href={`/DisplayMenu/${_id}/${token}`}>
+                    <a href={`/DisplayMenu/${_id}/${token}/${banquet_name}`}>
                       <button className="banquet-menu-btn">Continue</button>
                     </a>
                   </div>
