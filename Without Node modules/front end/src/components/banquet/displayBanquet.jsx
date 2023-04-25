@@ -95,6 +95,14 @@ const DisplayBanquet = ({ userId }) => {
     }
     setBanquetData(response.data);
   };
+  const sortAscending = async () => {
+    const response = await axios.get(`/api/filterBanquetAscending`);
+    setBanquetData(response.data);
+  };
+  const sortDescending = async () => {
+    const response = await axios.get(`/api/filterBanquetDescending`);
+    setBanquetData(response.data);
+  };
 
   useEffect(() => {
     fetchData();
@@ -127,7 +135,6 @@ const DisplayBanquet = ({ userId }) => {
                 onChange={(e) => {
                   handleSearchByLocationInput(e);
                 }}
-                style={{ height: "40px", width: "200px", textAlign: "center" }}
               >
                 <option value="" disabled selected>
                   Location
@@ -199,6 +206,24 @@ const DisplayBanquet = ({ userId }) => {
                 </p>
               )}
             </div>
+            <div className="button-asc-desc">
+              <button
+                type="submit"
+                onClick={() => {
+                  sortAscending();
+                }}
+              >
+                Sort Ascending
+              </button>
+              <button
+                type="submit"
+                onClick={() => {
+                  sortDescending();
+                }}
+              >
+                Sort Descending
+              </button>
+            </div>
           </div>
           {/* <button
             type="submit"
@@ -238,7 +263,7 @@ const DisplayBanquet = ({ userId }) => {
                       <strong>Price: </strong>
                       {banquet_price}
                     </p>
-                    <a href={`/DisplayMenu/${_id}/${token}`}>
+                    <a href={`/DisplayMenu/${_id}/${token}/${banquet_name}`}>
                       <button className="banquet-menu-btn">Continue</button>
                     </a>
                   </div>

@@ -91,7 +91,7 @@ function App() {
           )}
           <Route path="/gallery" element={<Gallery />}></Route>
           <Route
-            path="/DisplayMenu/:userId/:token"
+            path="/DisplayMenu/:userId/:token/:banquetName"
             element={<DisplayMenu />}
           ></Route>
           <Route path="/bookBanquet" element={<BookBanquet />}></Route>

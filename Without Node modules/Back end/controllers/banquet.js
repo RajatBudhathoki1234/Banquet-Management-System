@@ -52,15 +52,24 @@ const createBanquet = async (req, res) => {
 const filterBanquetName = async (req, res) => {
   try {
     const { name } = req.params;
-    const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    console.log(newName);
+    const searchTerm = name.toLowerCase();
     const getBanquetName = await banquetModel.find({
-      banquet_name: { $regex: newName },
+      banquet_name: { $regex: `.*${searchTerm}.*`, $options: "i" },
     });
+
     if (getBanquetName.length === 0) {
       return res.send("unsucessful");
     }
-    res.json(getBanquetName);
+
+    const results = getBanquetName.filter((banquet) => {
+      const sentence = banquet.banquet_name.toLowerCase();
+      const words = sentence.split(" ");
+      return words.some((word) => {
+        return word.includes(searchTerm) || searchTerm.includes(word);
+      });
+    });
+
+    res.json(results);
   } catch (error) {
     console.log(error);
   }
@@ -100,16 +109,26 @@ const filterBanquetPrice = async (req, res) => {
     console.log(error);
   }
 };
-const filterbanquetAsc = async (req, res) => {
+const filterBanquetAscending = async (req, res) => {
   try {
-    const { range } = req.params;
-    console.log(range);
-    const getBanquetRange = await banquetModel
-      .find({
-        banquet_price: { $gte: 0 },
-      })
-      .sort({ banquet_price: 0 });
+    const getBanquetRange = await banquetModel.aggregate([
+      { $sort: { banquet_price: 1 } },
+    ]);
+    if (getBanquetRange.length === 0) {
+      return res.send("unsucessful");
+    }
+    console.log(getBanquetRange);
+    res.json(getBanquetRange);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+const filterBanquetDescending = async (req, res) => {
+  try {
+    const getBanquetRange = await banquetModel.aggregate([
+      { $sort: { banquet_price: -1 } },
+    ]);
     // console.log(getBanquetRange);
     if (getBanquetRange.length === 0) {
       return res.send("unsucessful");
@@ -126,5 +145,6 @@ module.exports = {
   filterBanquetName,
   filterBanquetLocation,
   filterBanquetPrice,
-  filterbanquetAsc,
+  filterBanquetAscending,
+  filterBanquetDescending,
 };

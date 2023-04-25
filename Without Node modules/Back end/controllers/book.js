@@ -1,6 +1,9 @@
 const bookedSchema = require("../models/book");
+const registerModel = require("../models/register");
 //Importing bcrypt to hash the password.
 const bcrypt = require("bcryptjs");
+//Importing nodemailer for sending mail.
+const nodemailer = require("nodemailer");
 
 //Importing jwt to create a token.
 const jwt = require("jsonwebtoken");
@@ -42,7 +45,8 @@ const createReservation = async (req, res) => {
 const bookBanquet = async (req, res) => {
   try {
     //Destructuring the object.
-    const { token } = req.params;
+    const { token, banquetName } = req.params;
+    console.log(banquetName);
     //Decoding the token with secret key and token.
     let decoded = await jwt.verify(token, "jwtsecret");
 
@@ -56,6 +60,7 @@ const bookBanquet = async (req, res) => {
 
     await bookedSchema.create({
       bookUserId: userId,
+      banquetName: banquetName,
       shift: shift,
       date: date,
       guest: guest,
@@ -64,7 +69,57 @@ const bookBanquet = async (req, res) => {
       mainCourse: dinner,
       desert: desert,
     });
+    const adminData = await registerModel.findOne({ userId: userId });
 
+    //Sending email to created banquet person.
+
+    //Creating a medium to send email.
+    let transporter = nodemailer.createTransport({
+      //Domain name.
+      service: "hotmail",
+      auth: {
+        //Your email
+        user: `${process.env.EMAIL}`,
+        //Your password
+        pass: `${process.env.PASSWORD}`,
+      },
+    });
+
+    // //Contents of email.
+    // let mailConfiguration = await transporter.sendMail({
+    //   from: `${process.env.EMAIL}`,
+    //   to: `${adminData.email}`,
+    //   subject: "Banquet Booked",
+    //   html: `<h3>You have booked the banquet with following details. Thank you for booking</h3>
+    //   <p>
+    //   Name of Banquet: ${banquetName}
+    //   <br>
+    //   Shift: ${shift}
+    //   <br>
+    //   Date: ${date}
+    //   <br>
+    //   Total no. of Guest Guest: ${guest}
+    //   <br>
+    //   type: ${type}
+    //   <br>
+    //   Starters: ${breakfast}
+    //   <br>
+    //   MainCourse: ${dinner}
+    //   <br>
+    //   Desert: ${desert}
+    //   <br>
+    //   </p>`,
+    // });
+
+    // //Sending message to user email for verification.
+    // transporter.sendMail(mailConfiguration, function (error, info) {
+    //   //If not successful.
+    //   if (error) {
+    //     throw new CustomAPIError("Email not send");
+    //   }
+    //   //If successful.
+    //   console.log("Sent: " + info.response);
+    // });
     res.send("Booked");
   } catch (error) {
     console.log(error);

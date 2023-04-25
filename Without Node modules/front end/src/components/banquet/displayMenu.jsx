@@ -7,7 +7,7 @@ import axios from "axios";
 import "./displayMenu.css";
 
 const DisplayMenu = () => {
-  const { userId, token } = useParams();
+  const { userId, token, banquetName } = useParams();
 
   const [menuData, setMenuData] = useState([]);
 
@@ -30,7 +30,10 @@ const DisplayMenu = () => {
                 Maximum Capacity <b>{price}</b>
               </p>
             </div>
-            <form method="POST" action={`/api/bookBanquet/${token}`}>
+            <form
+              method="POST"
+              action={`/api/bookBanquet/${token}/${banquetName}`}
+            >
               <div className="form-menus">
                 <div className="heading-menu">
                   <h2>STARTERS</h2>

@@ -135,7 +135,6 @@ const DisplayBanquet = ({ userId }) => {
                 onChange={(e) => {
                   handleSearchByLocationInput(e);
                 }}
-                style={{ height: "40px", width: "200px", textAlign: "center" }}
               >
                 <option value="" disabled selected>
                   Location
