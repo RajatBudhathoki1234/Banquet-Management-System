@@ -4,10 +4,14 @@ import { useParams } from "react-router-dom";
 
 import axios from "axios";
 
+import Footer from "../footer/Footer";
+
 import "./displayMenu.css";
 
 const DisplayMenu = () => {
   const { userId, token, banquetName } = useParams();
+
+  console.log(banquetName);
 
   const [menuData, setMenuData] = useState([]);
 
@@ -21,6 +25,21 @@ const DisplayMenu = () => {
 
   return (
     <>
+      <div className="img-section">
+        {/* <img src={require("../images/sub-banner.jpg")} alt="" /> */}
+        <div className="img-content">
+          <h2 className="animate__animated animate__pulse">
+            List of Banquet and their Blogs
+          </h2>
+          <p className="animate__animated animate__lightSpeedInLeft">
+            Are you looking for the perfect venue for your upcoming banquet, but
+            feeling overwhelmed by the endless options? Look no further! Our
+            blog has everything you need to know about planning the perfect
+            banquet, from choosing the ideal venue to creating a mouthwatering
+            menu that will leave your guests wanting more.
+          </p>
+        </div>
+      </div>
       {menuData.map((item) => {
         const { breakfast, desert, dinner, price } = item;
         return (
@@ -40,22 +59,36 @@ const DisplayMenu = () => {
                 </div>
 
                 <div className="menu-items">
-                  <div className="breakfast-image">
-                    <img src={require("../images/menu/breakfast.jpg")} alt="" />
-                  </div>
-
                   <div className="menu-content-form">
                     {breakfast.map((item, index) => {
                       return (
-                        <div key={index}>
-                          <input
-                            type="checkbox"
-                            id={item}
-                            name="breakfast"
-                            value={item}
-                          />
-                          <label htmlFor="breakfast">{item}</label>
-                          <br />
+                        <div key={index} className="display-all-menu">
+                          <div className="breakfast-image">
+                            <img
+                              src={require("../images/menu/breakfast.jpg")}
+                              alt=""
+                            />
+                          </div>
+                          <div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id={item}
+                                name="breakfast"
+                                value={item}
+                              />
+                              <label htmlFor="breakfast">{item}</label>
+                              <br />
+                            </div>
+                            <div className="underline-dotted"></div>
+                            <div className="menu-text">
+                              <p style={{ color: "white" }}>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequatur perspiciatis
+                                dolore, .
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       );
                     })}
@@ -69,26 +102,37 @@ const DisplayMenu = () => {
                 </div>
 
                 <div className="menu-items">
-                  <div className="dinner-image">
-                    <img
-                      src={require("../images/menu/dinner.jpg")}
-                      alt=""
-                      width="500"
-                    />
-                  </div>
-
                   <div className="menu-content-form">
                     {dinner.map((item, index) => {
                       return (
-                        <div key={index}>
-                          <input
-                            type="checkbox"
-                            id={item}
-                            name="dinner"
-                            value={item}
-                          />
-                          <label htmlFor="dinner">{item}</label>
-                          <br />
+                        <div key={index} className="display-all-menu">
+                          <div className="breakfast-image">
+                            <img
+                              src={require("../images/menu/dinner.jpg")}
+                              alt=""
+                              width="500"
+                            />
+                          </div>
+                          <div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id={item}
+                                name="dinner"
+                                value={item}
+                              />
+                              <label htmlFor="dinner">{item}</label>
+                              <br />
+                            </div>
+                            <div className="underline-dotted"></div>
+                            <div className="menu-text">
+                              <p style={{ color: "white" }}>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequatur perspiciatis
+                                dolore, .
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       );
                     })}
@@ -102,26 +146,37 @@ const DisplayMenu = () => {
                 </div>
 
                 <div className="menu-items">
-                  <div className="dinner-image">
-                    <img
-                      src={require("../images/menu/dinner.jpg")}
-                      alt=""
-                      width="500"
-                    />
-                  </div>
-
                   <div className="menu-content-form">
                     {desert.map((item, index) => {
                       return (
-                        <div key={index}>
-                          <input
-                            type="checkbox"
-                            id={item}
-                            name="desert"
-                            value={item}
-                          />
-                          <label htmlFor="desert">{item}</label>
-                          <br />
+                        <div key={index} className="display-all-menu">
+                          <div className="breakfast-image">
+                            <img
+                              src={require("../images/menu/dinner.jpg")}
+                              alt=""
+                              width="500"
+                            />
+                          </div>
+                          <div>
+                            <div>
+                              <input
+                                type="checkbox"
+                                id={item}
+                                name="desert"
+                                value={item}
+                              />
+                              <label htmlFor="desert">{item}</label>
+                              <br />
+                            </div>
+                            <div className="underline-dotted"></div>
+                            <div className="menu-text">
+                              <p style={{ color: "white" }}>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequatur perspiciatis
+                                dolore, .
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       );
                     })}
@@ -135,6 +190,7 @@ const DisplayMenu = () => {
           </div>
         );
       })}
+      <Footer />
     </>
   );
 };

@@ -66,9 +66,10 @@ const register = async (req, res) => {
         }
         //If successful.
         console.log("Sent: " + info.response);
+
         return res.json("Sucessfull");
       });
-      return res.json("Sucessfull");
+      return res.json("Sucess");
     }
     res.json("UnSucessfull");
   } catch (error) {
@@ -100,7 +101,7 @@ const login = async (req, res) => {
     const checkEmail = await registerModel.findOne({ email });
 
     if (!checkEmail) {
-      return res.send("Invalid credentials");
+      return res.json("UnSucessfull");
     }
 
     //Checking if password matches with database password.
@@ -120,10 +121,10 @@ const login = async (req, res) => {
 
       res.cookie("userId", userId, { maxAge: 150000000, signed: true });
 
-      return res.send("sucess");
+      return res.json("Sucess");
     }
     //If not.
-    return res.send("unsucessful");
+    res.json("Unsucessfull");
   } catch (error) {
     console.log(error);
   }
@@ -134,12 +135,15 @@ const sendResetPasswordLink = async (req, res) => {
     //Destructuring the object.
     const { email } = req.body;
 
+    console.log(req.body);
+
     //Searching for email in the database.
     const checkEmail = await registerModel.findOne({ email });
 
     //Checking if email exists in the database.
     if (!checkEmail) {
-      return res.send("Sorry no email found");
+      console.log(checkEmail);
+      return res.json("UnSucessfull");
     }
 
     //Creating a token using json web token.
@@ -175,13 +179,12 @@ const sendResetPasswordLink = async (req, res) => {
     transporter.sendMail(mailConfiguration, function (error, info) {
       //If not successful.
       if (error) {
-        return res.send("Mail could not be send");
+        console.log("ERROR" + error);
       }
       //If successful.
       console.log("Sent: " + info.response);
-      return res.send("Email did not match");
     });
-    res.send("Please Check Your Email For Verifications");
+    res.json("Sucess");
   } catch (error) {
     console.log(error);
   }
