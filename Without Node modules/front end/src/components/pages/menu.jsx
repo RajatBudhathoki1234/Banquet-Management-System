@@ -2,6 +2,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import React, { useState } from "react";
 
+import Footer from "../footer/Footer";
+
 import "./menu.css";
 
 const Menu = () => {
@@ -116,8 +118,20 @@ const Menu = () => {
 
   return (
     <>
+      <div className="img-section">
+        {/* <img src={require("../images/sub-banner.jpg")} alt="" /> */}
+        <div className="img-content">
+          <h2 className="animate__animated animate__pulse">
+            Please Costumize your Available Menu Below
+          </h2>
+          <p className="animate__animated animate__lightSpeedInLeft">
+            Welcome to our menu creation system! With our easy-to-use interface,
+            you can create custom menus for any occasion, from intimate dinners
+            to large events.
+          </p>
+        </div>
+      </div>
       <div className="banquetMenu-container">
-        <h1>Add Menu</h1>
         <section className="breakfast-section menu-section">
           <label htmlFor="breakfast">Breakfast</label>
           {breakfast.map((item, index) => {
@@ -275,6 +289,7 @@ const Menu = () => {
           </button>
         </section>
       </div>
+      <Footer />
     </>
   );
 };

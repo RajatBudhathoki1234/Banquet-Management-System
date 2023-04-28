@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import { AiFillCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
 import { useNagivate } from "react-router-dom";
 
@@ -14,7 +16,11 @@ const Register = () => {
     password: "",
   });
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [responseMessage, setResponseMessage] = useState({
+    msg: "",
+    sucess: false,
+    unSucess: false,
+  });
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -26,11 +32,25 @@ const Register = () => {
     e.preventDefault();
     const response = await axios.post("/api/register", user);
     console.log(response);
-    if (response.data === "Sucessfull") {
-      setIsOpen(true);
-      console.log("je;saddddddddddddddddddddd");
+    if (response.data === "UnSucessfull") {
+      setResponseMessage({ msg: "Cannot Register", unSucess: true });
+    } else if (response.data === "Sucess") {
+      setResponseMessage({
+        msg: "Sucessfull, Please Check your Email For Verification",
+        sucess: true,
+      });
     }
   };
+
+  useEffect(() => {
+    const Timer = setTimeout(() => {
+      setResponseMessage({ msg: "", unSucess: false, sucess: false });
+    }, 2000);
+
+    return () => {
+      clearTimeout(Timer);
+    };
+  }, [responseMessage]);
 
   return (
     <>
@@ -123,28 +143,34 @@ const Register = () => {
                 <div className="forget-pass">
                   <a href="login">Already have an account. Sign in?</a>
                 </div>
-                {isOpen && (
-                  <div>
-                    <article
-                      style={{ background: "green", padding: "2px 5px" }}
-                    >
-                      <p style={{ color: "white" }}>
-                        Completed Register Please Check Your Email
-                      </p>
-                      {/* <button
-                        className="X"
-                        onClick={() => {
-                          setIsOpen(false);
-                        }}
-                      >
-                        X
-                      </button> */}
-                    </article>
-                  </div>
-                )}
               </form>
               {/* <!--End of form section--> */}
             </section>
+            {responseMessage.sucess && (
+              <>
+                <article className="pop-up">
+                  <AiFillCheckCircle size={100} color="lime" />
+                  <h2>{responseMessage.msg}.</h2>
+                </article>
+              </>
+            )}
+            {responseMessage.unSucess && (
+              <>
+                <article
+                  className="pop-up"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "2rem",
+                    flexDirection: "column",
+                  }}
+                >
+                  <AiOutlineCloseCircle size={100} color="red" />
+                  <h2 style={{ color: "red" }}>{responseMessage.msg}</h2>
+                </article>
+              </>
+            )}
           </section>
         </div>
       </main>

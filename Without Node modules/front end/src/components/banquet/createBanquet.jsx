@@ -51,7 +51,7 @@ function Banquet() {
                 </div>
 
                 <div className="location-field" style={{ margin: "20px 50px" }}>
-                  <select name="location">
+                  <select name="location" required>
                     <option value="" disabled selected>
                       Location
                     </option>

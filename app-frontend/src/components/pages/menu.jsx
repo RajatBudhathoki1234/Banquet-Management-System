@@ -121,18 +121,17 @@ const Menu = () => {
       <div className="img-section">
         {/* <img src={require("../images/sub-banner.jpg")} alt="" /> */}
         <div className="img-content">
-          <h2 className="animate__animated animate__pulse">Create Banquet</h2>
+          <h2 className="animate__animated animate__pulse">
+            Please Costumize your Available Menu Below
+          </h2>
           <p className="animate__animated animate__lightSpeedInLeft">
-            Are you looking for the perfect venue for your upcoming banquet, but
-            feeling overwhelmed by the endless options? Look no further! Our
-            blog has everything you need to know about planning the perfect
-            banquet, from choosing the ideal venue to creating a mouthwatering
-            menu that will leave your guests wanting more.
+            Welcome to our menu creation system! With our easy-to-use interface,
+            you can create custom menus for any occasion, from intimate dinners
+            to large events.
           </p>
         </div>
       </div>
       <div className="banquetMenu-container">
-        <h1>Add Menu</h1>
         <section className="breakfast-section menu-section">
           <label htmlFor="breakfast">Breakfast</label>
           {breakfast.map((item, index) => {

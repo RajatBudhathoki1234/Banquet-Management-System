@@ -197,6 +197,25 @@ body {
   transform: rotate(130deg);
 }
 
+.pop-up {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to top, #eecda3, #ef629f);
+  border-radius: 20px;
+}
+.pop-up h2 {
+  text-align: center;
+  color: white;
+}
+
 /**
 *End of main section
 */

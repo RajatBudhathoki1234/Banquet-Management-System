@@ -29,22 +29,22 @@ const DisplayMenu = () => {
         {/* <img src={require("../images/sub-banner.jpg")} alt="" /> */}
         <div className="img-content">
           <h2 className="animate__animated animate__pulse">
-            List of Banquet and their Blogs
+            WELCOME TO THE BANQUET
           </h2>
           <p className="animate__animated animate__lightSpeedInLeft">
-            Are you looking for the perfect venue for your upcoming banquet, but
-            feeling overwhelmed by the endless options? Look no further! Our
-            blog has everything you need to know about planning the perfect
-            banquet, from choosing the ideal venue to creating a mouthwatering
-            menu that will leave your guests wanting more.
+            Welcome to our menu design system! With our system, you have the
+            flexibility to design a menu that perfectly fits your needs and
+            preferences. Whether you're looking to create a menu for a special
+            event, a restaurant, or any other occasion, our system makes it easy
+            and convenient for you to do so.
           </p>
         </div>
       </div>
       {menuData.map((item) => {
         const { breakfast, desert, dinner, price } = item;
         return (
-          <div className="menu" key={userId}>
-            <div className="menu-price">
+          <div className="form-menus" key={userId}>
+            <div className="heading-menu">
               <p>
                 Maximum Capacity <b>{price}</b>
               </p>
@@ -64,10 +64,7 @@ const DisplayMenu = () => {
                       return (
                         <div key={index} className="display-all-menu">
                           <div className="breakfast-image">
-                            <img
-                              src={require("../images/menu/breakfast.jpg")}
-                              alt=""
-                            />
+                            <img src={require("../images/bbb.jpg")} alt="" />
                           </div>
                           <div>
                             <div>
@@ -83,9 +80,8 @@ const DisplayMenu = () => {
                             <div className="underline-dotted"></div>
                             <div className="menu-text">
                               <p style={{ color: "white" }}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Consequatur perspiciatis
-                                dolore, .
+                                It replenishes your supply of glucose to boost
+                                your energy levels and alertness.
                               </p>
                             </div>
                           </div>
@@ -108,7 +104,7 @@ const DisplayMenu = () => {
                         <div key={index} className="display-all-menu">
                           <div className="breakfast-image">
                             <img
-                              src={require("../images/menu/dinner.jpg")}
+                              src={require("../images/jimbu.jpg")}
                               alt=""
                               width="500"
                             />
@@ -127,9 +123,8 @@ const DisplayMenu = () => {
                             <div className="underline-dotted"></div>
                             <div className="menu-text">
                               <p style={{ color: "white" }}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Consequatur perspiciatis
-                                dolore, .
+                                The main course is the primary dish of food
+                                served for lunch or dinner.
                               </p>
                             </div>
                           </div>
@@ -152,7 +147,7 @@ const DisplayMenu = () => {
                         <div key={index} className="display-all-menu">
                           <div className="breakfast-image">
                             <img
-                              src={require("../images/menu/dinner.jpg")}
+                              src={require("../images/Desert.jpg")}
                               alt=""
                               width="500"
                             />
@@ -171,9 +166,8 @@ const DisplayMenu = () => {
                             <div className="underline-dotted"></div>
                             <div className="menu-text">
                               <p style={{ color: "white" }}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Consequatur perspiciatis
-                                dolore, .
+                                Desserts can be defined as a usually sweeter
+                                course that concludes a meal.
                               </p>
                             </div>
                           </div>
