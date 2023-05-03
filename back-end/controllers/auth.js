@@ -55,7 +55,7 @@ const register = async (req, res) => {
       our website and entered your email.
       Please follow the given link to verify your email
       http://localhost:8000/api/verify/${token}
-      Thanks</h3>`,
+      Thanks and Kind Regards, Banquet Reservation Team</h3>`,
       });
 
       //Sending message to user email for verification.
@@ -167,12 +167,12 @@ const sendResetPasswordLink = async (req, res) => {
     let mailConfiguration = await transporter.sendMail({
       from: `${process.env.EMAIL}`,
       to: `${email}`,
-      subject: "Email verifications",
+      subject: "Password Reset ",
       html: `<h3>Hi! There, You have recently visited
     	our website and entered your email.
     	Please follow the given link to verify your email to reset the password
     	http://localhost:8000/api/verifyEmail/${token}
-    	Thanks</h3>`,
+    	Thank you and Kind Regards, Banquet Reservation Team</h3>`,
     });
 
     //Sending message to user email for verification.

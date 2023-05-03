@@ -100,13 +100,13 @@ const bookBanquet = async (req, res) => {
     //   <br>
     //   Total no. of Guest Guest: ${guest}
     //   <br>
-    //   type: ${type}
+    //   Type: ${type}
     //   <br>
-    //   Starters: ${breakfast}
+    //   Choosed Starters: ${breakfast}
     //   <br>
-    //   MainCourse: ${dinner}
+    //   Choosed MainCourse: ${dinner}
     //   <br>
-    //   Desert: ${desert}
+    //   Choosed Desert: ${desert}
     //   <br>
     //   </p>`,
     // });

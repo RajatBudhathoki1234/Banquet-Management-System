@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { AiFillCheckCircle, AiOutlineCloseCircle } from "react-icons/ai";
 
 import Footer from "../footer/Footer";
 
@@ -8,8 +8,6 @@ import "./menu.css";
 
 const Menu = () => {
   let { token } = useParams();
-
-  const [Unsucessfull, setUnsucessfull] = useState(false);
 
   const [breakfast, setbreakFast] = useState([]);
 
@@ -19,7 +17,11 @@ const Menu = () => {
 
   const [pricePerPlate, setpricePerPlate] = useState();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [responseMessage, setResponseMessage] = useState({
+    msg: "",
+    sucess: false,
+    unSucess: false,
+  });
 
   const navigate = useNavigate();
 
@@ -93,28 +95,36 @@ const Menu = () => {
         })
         .then((data) => {
           if (data === "Unsucessfull") {
-            setUnsucessfull(true);
+            setResponseMessage({ msg: "Invaild Credentials", unSucess: true });
           }
           if (data === "Sucess") {
-            setbreakFast("");
-            setDinner("");
-            setDesert("");
-            setpricePerPlate("");
-            // setIsOpen(true)
-            // nagivateFun()
+            // setbreakFast("");
+            // setDinner("");
+            // setDesert("");
+            // setpricePerPlate("");
+            setResponseMessage({
+              msg: "Sucessfully Create Banquet",
+              sucess: true,
+            });
+            setTimeout(() => {
+              window.location.reload(navigate("/"));
+            }, 2000);
           }
         });
     } else {
-      setUnsucessfull(true);
+      setResponseMessage({ msg: "Please Fill Form Properly", unSucess: true });
     }
   };
 
-  const nagivateFun = () => {
-    setTimeout(() => {
-      setIsOpen(false);
-      navigate("/");
+  useEffect(() => {
+    const Timer = setTimeout(() => {
+      setResponseMessage({ msg: "", unSucess: false, sucess: false });
     }, 2000);
-  };
+
+    return () => {
+      clearTimeout(Timer);
+    };
+  }, [responseMessage]);
 
   return (
     <>
@@ -162,7 +172,7 @@ const Menu = () => {
             name="breakfast"
             onClick={(e) => {
               handleAddMenu(e);
-              setUnsucessfull(false);
+        
             }}
           >
             Add Breakfast
@@ -199,7 +209,7 @@ const Menu = () => {
             name="dinner"
             onClick={(e) => {
               handleAddMenu(e);
-              setUnsucessfull(false);
+              
             }}
           >
             Add Dinner
@@ -236,13 +246,34 @@ const Menu = () => {
             name="desert"
             onClick={(e) => {
               handleAddMenu(e);
-              setUnsucessfull(false);
+             
             }}
           >
             Add Desert
           </button>
         </section>
-
+        <div style={{ position: "relative" }}>
+          {
+            responseMessage.sucess && (
+              <>
+                <article className="pop-up">
+                  <AiFillCheckCircle size={100} color="lime" />
+                  <h2>{responseMessage.msg}.</h2>
+                </article>
+              </>
+            )
+          }
+          {
+            responseMessage.unSucess && (
+              <>
+                <article className="pop-up" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "2rem", flexDirection: "column" }}>
+                  <AiOutlineCloseCircle size={100} color="red" />
+                  <h2 style={{ color: "red" }}>{responseMessage.msg}</h2>
+                </article>
+              </>
+            )
+          }
+        </div>
         <section className="price-section  menu-section">
           <label htmlFor="price">Capacity</label>
 
@@ -254,28 +285,6 @@ const Menu = () => {
             onChange={(e) => setpricePerPlate(e.target.value)}
           />
         </section>
-
-        {Unsucessfull && (
-          <p style={{ color: "red", fontSize: "20px", fontWeight: "500" }}>
-            Please check empty fields
-          </p>
-        )}
-
-        {isOpen && (
-          <div className="sucess-popUp">
-            <article className="pop-up-message">
-              <p>Operation Success</p>
-              <button
-                className="X"
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                }}
-              >
-                X
-              </button>
-            </article>
-          </div>
-        )}
 
         <section className="submit-menu-section">
           <button

@@ -166,11 +166,11 @@ function About() {
           <p>We have a great for the best Service</p>
           <div className="team-container">
             {team.map((item, index) => {
-              const { name, position, desc } = item;
+              const { name, position, desc, image } = item;
               return (
                 <div className="person" key={index} data-aos="zoom-in">
                   <div className="person-image">
-                    <img src={require("../images/rabi.png")} alt="" />
+                    <img src={image} alt="" />
                   </div>
                   <div className="debug">{/* debug code */}</div>
 

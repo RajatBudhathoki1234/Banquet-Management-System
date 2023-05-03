@@ -72,7 +72,7 @@ const Login = () => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Username"
+                    placeholder="Email Address"
                     onChange={(e) => {
                       handleChange(e);
                     }}

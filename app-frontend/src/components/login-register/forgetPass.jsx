@@ -74,7 +74,7 @@ const ForgetPass = () => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Username"
+                    placeholder="Email Address"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
