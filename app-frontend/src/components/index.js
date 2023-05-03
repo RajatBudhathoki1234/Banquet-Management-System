@@ -15,3 +15,4 @@ export { default as Login } from "./login-register/login";
 export { default as Register } from "./login-register/register";
 export { default as ForgetPass } from "./login-register/forgetPass";
 export { default as ChangePassword } from "./login-register/password";
+export { default as Khalti } from "./Khalti/Khalti";

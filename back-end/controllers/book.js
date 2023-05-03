@@ -71,7 +71,7 @@ const bookBanquet = async (req, res) => {
     });
     const adminData = await registerModel.findOne({ userId: userId });
 
-    //Sending email to created banquet person.
+    //Sending email to book banquet person.
 
     //Creating a medium to send email.
     let transporter = nodemailer.createTransport({

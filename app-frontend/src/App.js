@@ -23,6 +23,7 @@ import {
   BookBanquet,
   Contact,
   PageNotFound,
+  Khalti,
 } from "./components";
 
 function App() {

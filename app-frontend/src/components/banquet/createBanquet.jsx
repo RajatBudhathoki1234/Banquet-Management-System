@@ -46,6 +46,7 @@ function Banquet() {
                     id="desc"
                     name="desc"
                     placeholder="Description"
+                    minLength={50}
                   />
                 </div>
 
