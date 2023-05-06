@@ -7,7 +7,7 @@ const data = [
     read: "5 min read",
     postedDate: "7 hours ago",
     title: "TAAJ PALACE",
-    text: "             A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions. Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.",
+    text: "ABC Banquet Hall is a premier event venue, perfect for hosting a wide range of events, including weddings, corporate events, social gatherings, cultural celebrations, and more. Our spacious banquet hall can accommodate up to 300 guests and is equipped with state-of-the-art lighting and sound systems, ensuring that your event is a success. As the owner of ABC Banquet Hall, I take pride in providing our clients with exceptional service and attention to detail. Our team of experienced event planners will work with you to create a customized menu, decor, and entertainment to make your event unforgettable. Our venue is conveniently located with ample parking, making it easy for your guests to attend.             ",
   },
   {
     id: 2,
@@ -16,11 +16,7 @@ const data = [
     read: "4 min read",
     postedDate: "1 day ago",
     title: `Star Banquet`,
-    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
-
-    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
-    
-    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    text: `Welcome to The Star Banquet, the ultimate event venue for weddings, corporate events, social gatherings, and more. Our stunning ballroom can accommodate up to 500 guests and is equipped with the latest technology in lighting and sound. Our experienced event planners will work with you to create a customized menu, decor, and entertainment to make your event unforgettable. With over 10 years of experience, The Grand Ballroom is the perfect choice for your next event.`,
     image: require("../images/gallery/3.jpg"),
   },
   {
@@ -30,7 +26,7 @@ const data = [
     read: "9 min read",
     postedDate: "Feb 13",
     title: "Smart Palace",
-    text: "A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.",
+    text: " The Smart Palace is a beautiful outdoor event venue, perfect for hosting weddings, corporate events, and social gatherings. Our lush garden setting can accommodate up to 200 guests and is equipped with a state-of-the-art sound system and lighting. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 20 years of experience, The Garden Terrace is the perfect choice for your next outdoor event.",
     image: require("../images/gallery/4.jpg"),
   },
   {
@@ -40,11 +36,7 @@ const data = [
     read: "8 min read",
     postedDate: "Feb 10",
     title: `Mystic Mountain`,
-    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
-
-    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
-    
-    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    text: `Step into Mystic Mountain and experience elegance and luxury like never before. Our sophisticated event venue can accommodate up to 350 guests and is equipped with a stunning crystal chandelier, creating the perfect ambiance for your event. Our experienced event planners will work with you to create a customized menu, decor, and entertainment that suits your style and preferences. With over 15 years of experience, The Crystal Room is the perfect choice for your next upscale event.`,
     image: require("../images/gallery/7.jpg"),
   },
   {
@@ -54,11 +46,7 @@ const data = [
     read: "3 min read",
     postedDate: "Feb 9",
     title: `Park Village Resort`,
-    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
-
-    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
-    
-    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    text: `The Park Village Resort is a breathtaking waterfront event venue, perfect for weddings, corporate events, and social gatherings. Our panoramic views of the harbor create the perfect backdrop for your event, while our spacious ballroom can accommodate up to 400 guests. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 10 years of experience, The Harbor View is the perfect choice for your next waterfront event.`,
     image: require("../images/gallery/8.jpg"),
   },
   {
@@ -67,11 +55,7 @@ const data = [
     read: "6 min read",
     postedDate: "Feb 6",
     title: `Hotel Yak & Yeti`,
-    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
-
-    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
-    
-    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    text: `Step into Hotel Yak & Yeti and experience the magic of an outdoor event. Our beautiful pavilion can accommodate up to 500 guests and is equipped with state-of-the-art lighting and sound systems. Our experienced event planners will work with you to create a customized menu, decor, and entertainment that suits your style and preferences. With over 5 years of experience, The Starlight Pavilion is the perfect choice for your next outdoor event.`,
     image: require("../images/gallery/9.jpg"),
   },
   {
@@ -80,11 +64,7 @@ const data = [
     read: "6 min read",
     postedDate: "Feb 6",
     title: `Chandragiri Resort`,
-    text: `A banquet is an elaborate meal that is usually served at a formal event, such as a wedding reception, corporate event, or holiday party. It typically consists of multiple courses, including appetizers, main courses, and desserts, and is often accompanied by wine or other alcoholic beverages. Banquets have been a part of human history for centuries, with ancient civilizations such as the Greeks and Romans holding lavish feasts for important occasions.
-
-    Today, banquets remain an important part of our social and cultural events, providing an opportunity for people to come together and celebrate. They can be customized to fit a variety of themes and settings, from elegant black-tie affairs to casual backyard barbecues. Whether you're hosting a corporate gala, a charity fundraiser, or a family celebration, a well-planned banquet can be a memorable and enjoyable experience for all involved.
-    
-    To plan a successful banquet, it's important to consider factors such as the number of guests, the type of cuisine, and the overall ambiance of the event. A skilled event planner can help you navigate these considerations and create a personalized menu and decor scheme that fits your vision and budget. From hors d'oeuvres to desserts, every aspect of the meal should be carefully chosen and presented with elegance and attention to detail.`,
+    text: `The Chandragiri Resort is a stunning event venue, perfect for hosting weddings, corporate events, and social gatherings. Our historic building has been transformed into a modern event space, complete with the latest technology in lighting and sound. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 20 years of experience, The Renaissance Hall is the perfect choice for your next event.`,
     image: require("../images/gallery/10.jpg"),
   },
 ];

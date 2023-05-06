@@ -210,6 +210,7 @@ body {
   transform: translate(-50%, -50%);
   background: linear-gradient(to top, #eecda3, #ef629f);
   border-radius: 20px;
+  z-index: 1;
 }
 .pop-up h2 {
   text-align: center;

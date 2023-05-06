@@ -14,15 +14,14 @@ import Footer from "../footer/Footer";
 
 import "./displayBanquet.css";
 
-const url = "http://localhost:8000/api/getBanquet";
-
 const DisplayBanquet = ({ userId }) => {
   const [banquetData, setBanquetData] = useState([]);
 
   const [searchBanquetValue, setSearchBanquetValue] = useState("");
 
   const { token } = useParams();
-  console.log(token);
+
+  const [createdUserId, setCreatedUserId] = useState("");
 
   const [searchBanquetByLocation, setSearchBanquetByLocation] = useState("");
 
@@ -49,7 +48,7 @@ const DisplayBanquet = ({ userId }) => {
   }
 
   const fetchData = async () => {
-    fetch(url)
+    fetch(`http://localhost:8000/api/getBanquet/${token}`)
       .then((response) => {
         return response.json();
       })
@@ -115,8 +114,10 @@ const DisplayBanquet = ({ userId }) => {
         <div className="img-content">
           <h2 className="animate__animated animate__pulse">All Banquets</h2>
           <p className="animate__animated animate__lightSpeedInLeft">
-            Ridiculus sociosqu cursus neque cursus curae ante scelerisque
-            vehicula.
+            Booking a banquet hall through a booking system can be a convenient
+            and hassle-free experience. With just a few clicks, you can browse
+            through a variety of venues, check availability, and make
+            reservations for your desired date and time.
           </p>
         </div>
       </div>
@@ -238,6 +239,7 @@ const DisplayBanquet = ({ userId }) => {
             banquetData.map((item) => {
               const {
                 _id,
+                userId,
                 banquet_name,
                 banquet_description,
                 image_location,
@@ -263,7 +265,9 @@ const DisplayBanquet = ({ userId }) => {
                       <strong>Price: </strong>
                       {banquet_price}
                     </p>
-                    <a href={`/DisplayMenu/${_id}/${token}/${banquet_name}`}>
+                    <a
+                      href={`/DisplayMenu/${_id}/${token}/${banquet_name}/${banquet_price}`}
+                    >
                       <button className="banquet-menu-btn">Continue</button>
                     </a>
                   </div>

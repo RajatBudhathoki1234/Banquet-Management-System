@@ -79,10 +79,10 @@ function HomePage({ checkLogin }) {
             <div className="image-slider">
               <div className="image-content ">
                 <h2 className="animate__animated animate__pulse">
-                  Art of cooking
+                  Best Banquets
                 </h2>
                 <p className="animate__animated animate__lightSpeedInLeft">
-                  The best banquet in town
+                  Book without Any Hustle
                 </p>
               </div>
 

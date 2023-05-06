@@ -69,6 +69,7 @@ const BookBanquet = () => {
               onChange={(e) => {
                 handleChange(e);
               }}
+              required
             >
               <option value="" disabled selected>
                 Shift
@@ -90,6 +91,7 @@ const BookBanquet = () => {
               onChange={(e) => {
                 handleChange(e);
               }}
+              required
             />
 
             <input
@@ -101,6 +103,7 @@ const BookBanquet = () => {
               onChange={(e) => {
                 handleChange(e);
               }}
+              required
             />
 
             <select
@@ -108,6 +111,7 @@ const BookBanquet = () => {
               onChange={(e) => {
                 handleChange(e);
               }}
+              required
             >
               <option value="" disabled selected>
                 Type

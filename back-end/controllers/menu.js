@@ -99,9 +99,18 @@ const createMenu = async (req, res) => {
 
 const getMenu = async (req, res) => {
   try {
-    const { banquetId } = req.params;
+    const { banquetId, token } = req.params;
+
+    //Decoding the token with secret key and token.
+    let decoded = await jwt.verify(token, "jwtsecret");
+
+    const { guest } = decoded;
+
     const menu = await menuSchema.findOne({ banquetId: banquetId });
-    res.status(200).json(menu);
+
+    const newPrice = parseInt(guest);
+
+    res.status(200).json({ data: menu, price: newPrice });
   } catch (error) {
     console.log(error);
   }

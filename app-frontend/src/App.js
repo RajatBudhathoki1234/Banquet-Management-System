@@ -92,7 +92,7 @@ function App() {
           )}
           <Route path="/gallery" element={<Gallery />}></Route>
           <Route
-            path="/DisplayMenu/:userId/:token/:banquetName"
+            path="/DisplayMenu/:userId/:token/:banquetName/:banquetPrice"
             element={<DisplayMenu />}
           ></Route>
           <Route path="/bookBanquet" element={<BookBanquet />}></Route>

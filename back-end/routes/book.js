@@ -10,7 +10,9 @@ const {
 
 router.route("/api/filterBanquet").post(filterBanquet);
 
-router.route("/api/bookBanquet/:token/:banquetName").post(bookBanquet);
+router
+  .route("/api/bookBanquet/:token/:banquetName/:adminUserId/:price")
+  .post(bookBanquet);
 
 router.route("/api/createReservation").post(createReservation);
 

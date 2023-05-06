@@ -16,7 +16,7 @@ const {
 //Creating HTTP request methods with express router.
 router.route("/api/createBanquet").post(createBanquet);
 
-router.route("/api/getBanquet").get(getBanquet);
+router.route("/api/getBanquet/:token").get(getBanquet);
 
 router.route("/api/filterBanquetName/:name").get(filterBanquetName);
 

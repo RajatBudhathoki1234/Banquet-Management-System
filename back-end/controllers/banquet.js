@@ -1,10 +1,24 @@
 const banquetModel = require("../models/banquet");
+const bookedSchema = require("../models/book");
 
 //Importing jwt to create a token.
 const jwt = require("jsonwebtoken");
 
 const getBanquet = async (req, res) => {
   try {
+    const { token } = req.params;
+    let decoded = await jwt.verify(token, "jwtsecret");
+
+    const { date } = decoded;
+
+    const bookData = await bookedSchema.findOne({ date: date });
+
+    if (bookData !== null) {
+      const banquetData = await banquetModel.find({
+        banquet_name: { $ne: bookData.banquetName },
+      });
+      return res.json(banquetData);
+    }
     const banquetData = await banquetModel.find({});
     res.json(banquetData);
   } catch (error) {

@@ -139,7 +139,7 @@ const Contact = () => {
       {isOpen && (
         <div className="sucess-popUp">
           <article className="pop-up-message">
-            <p>Operation Success</p>
+            <p>Sucessfully Submitted</p>
             <button
               className="X"
               onClick={() => {

@@ -1,81 +1,94 @@
-import React from "react";
-import KhaltiCheckout from "khalti-checkout-web";
-import myKey from "./khaltiKey";
+import React, { useState } from "react";
+
 import axios from "axios";
 
-export default function Khalti() {
-  let buttonStyles = {
-    backgroundColor: "purple",
-    padding: "10px",
-    color: "white",
-    cursor: "pointer",
-    fontWeight: "bold",
-    border: "1px solid white",
-  };
+const Khalti = ({ payment }) => {
+  const [paymentUrl, setPaymentUrl] = useState(null);
 
-  let config = {
-    // replace this key with yours
-    publicKey: "test_public_key_30b8f76bd5114d07b1f0d874cf9f1e5f",
-    productIdentity: "123766",
-    productName: "My Ecommerce Store",
-    productUrl: "http://localhost:3000",
-    eventHandler: {
-      onSuccess(payload) {
-        // hit merchant api for initiating verfication
-        console.log(payload);
-        let data = {
-          token: payload.token,
-          amount: payload.amount,
-        };
-        axios
-          .get(
-            `https://meslaforum.herokuapp.com/khalti/${data.token}/${data.amount}/${myKey.secretKey}`
-          )
-          .then((response) => {
-            console.log(response.data);
-            alert("Thank you for generosity");
-          })
-          .catch((error) => {
-            console.log(error);
-          });
+  const initiatePayment = async () => {
+    const data = {
+      return_url: "http://localhost:3000/verify/",
+      website_url: "http://localhost:3000/",
+      amount: 1300,
+      purchase_order_id: "test12",
+      purchase_order_name: "test",
+      customer_info: {
+        name: "Rajat Budhathoki",
+        email: "budhathokirajat31@gmail.com",
+        phone: "9843660087",
       },
-      // onError handler is optional
-      onError(error) {
-        // handle errors
-        console.log(error);
-      },
-      onClose() {
-        console.log("widget is closing");
-      },
-    },
-    paymentPreference: [
-      "KHALTI",
-      "EBANKING",
-      "MOBILE_BANKING",
-      "CONNECT_IPS",
-      "SCT",
-    ],
-  };
+      amount_breakdown: [
+        {
+          label: "Mark Price",
+          amount: 1000,
+        },
+        {
+          label: "VAT",
+          amount: 300,
+        },
+      ],
+      product_details: [
+        {
+          identity: "1234567890",
+          name: "Khalti logo",
+          total_price: payment,
+          quantity: 1,
+          unit_price: payment,
+        },
+      ],
+    };
 
-  let checkout = new KhaltiCheckout(config);
+    const headers = {
+      Authorization: "Key e53ffb1e15a443ce8c65cfb95e0037e8",
+    };
+
+    try {
+      const response = await axios.post(
+        "https://a.khalti.com/api/v2/epayment/initiate/",
+        data,
+        { headers }
+      );
+      setPaymentUrl(response.data.payment_url);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
-    <>
-      <div
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "2rem",
+      }}
+    >
+      {console.log(payment)}
+      <button
         style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "20px",
+          backgroundColor: "purple",
+          padding: "15px 40px",
+          color: "white",
+          cursor: "pointer",
+          fontWeight: "bold",
+          border: "1px solid white",
         }}
+        onClick={initiatePayment}
       >
-        <button
-          onClick={() => checkout.show({ amount: 1000 })}
-          style={buttonStyles}
+        Pay Now Via Khalti
+      </button>
+      {paymentUrl && (
+        <a
+          href={paymentUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "purple" }}
         >
-          Pay Via Khalti
-        </button>
-      </div>
-    </>
+          Pay Booking Charge
+        </a>
+      )}
+    </div>
   );
-}
+};
+
+export default Khalti;

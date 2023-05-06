@@ -172,7 +172,6 @@ const Menu = () => {
             name="breakfast"
             onClick={(e) => {
               handleAddMenu(e);
-        
             }}
           >
             Add Breakfast
@@ -209,7 +208,6 @@ const Menu = () => {
             name="dinner"
             onClick={(e) => {
               handleAddMenu(e);
-              
             }}
           >
             Add Dinner
@@ -246,34 +244,39 @@ const Menu = () => {
             name="desert"
             onClick={(e) => {
               handleAddMenu(e);
-             
             }}
           >
             Add Desert
           </button>
         </section>
         <div style={{ position: "relative" }}>
-          {
-            responseMessage.sucess && (
-              <>
-                <article className="pop-up">
-                  <AiFillCheckCircle size={100} color="lime" />
-                  <h2>{responseMessage.msg}.</h2>
-                </article>
-              </>
-            )
-          }
-          {
-            responseMessage.unSucess && (
-              <>
-                <article className="pop-up" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "2rem", flexDirection: "column" }}>
-                  <AiOutlineCloseCircle size={100} color="red" />
-                  <h2 style={{ color: "red" }}>{responseMessage.msg}</h2>
-                </article>
-              </>
-            )
-          }
+          {responseMessage.sucess && (
+            <>
+              <article className="pop-up">
+                <AiFillCheckCircle size={100} color="lime" />
+                <h2>{responseMessage.msg}.</h2>
+              </article>
+            </>
+          )}
+          {responseMessage.unSucess && (
+            <>
+              <article
+                className="pop-up"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "2rem",
+                  flexDirection: "column",
+                }}
+              >
+                <AiOutlineCloseCircle size={100} color="red" />
+                <h2 style={{ color: "red" }}>{responseMessage.msg}</h2>
+              </article>
+            </>
+          )}
         </div>
+
         <section className="price-section  menu-section">
           <label htmlFor="price">Capacity</label>
 
