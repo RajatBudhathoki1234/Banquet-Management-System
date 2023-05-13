@@ -74,20 +74,41 @@ const AdminBro = require("admin-bro");
 const AdminBroExpress = require("@admin-bro/express");
 const AdminBroMongoose = require("@admin-bro/mongoose");
 const mongoose = require("mongoose");
+
+const authentication = require("express-authentication");
+const adminSchema = require("./models/admin");
+
+////////////////// To add new admin user in MongoDb /////////////////////////
+
+// const newUser = new adminSchema({
+//   email: "nimesh@gmail.com",
+//   password: "nimesh",
+//   role: "admin",
+// });
+// newUser.save((err) => {
+//   if (err) {
+//     console.error(err);
+//   } else {
+//     console.log("User added successfully");
+//   }
+// });
+
 AdminBro.registerAdapter(AdminBroMongoose);
 
 //Initializing the port value.
 const port = 8000 || process.env.PORT;
 
+let setTrue = false;
+
 //Connecting to database and starting the server.
 const start = async () => {
   try {
-    // Connecting to the server.
+    //Connecting to the server.
     mongoose.set("strictQuery", false);
-    const mongooseDb = await mongoose.connect(
-      "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1",
-      { useNewUrlParser: true }
-    );
+
+    const mongooseDb = await mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+    });
 
     await connectDB(process.env.MONGO_URL);
 
@@ -98,7 +119,52 @@ const start = async () => {
 
     const router = AdminBroExpress.buildRouter(adminBro);
 
-    app.use(adminBro.options.rootPath, router);
+    const isLoggedIn = async (req, res, next) => {
+      const { email, password } = req.body;
+      if (!email && !password) {
+        const err = new Error("Please Provide passwor d and email");
+        err.status = 401;
+        next(err);
+      }
+      const adminData = await adminSchema.findOne({ email: email });
+      if (adminData) {
+        if (adminData.password === password) {
+          req.isAdmin = true;
+          return next();
+        }
+      }
+      const err = new Error("Invaild email or password");
+      err.status = 401;
+      next(err);
+    };
+
+    const redirectToAdmin = (req, res, next) => {
+      if (req.isAdmin) {
+        setTrue = true;
+        // next();
+        return res.redirect("/admin");
+      }
+      const err = new Error("Invaild email or password");
+      err.status = 401;
+      next(err);
+    };
+
+    app.use("/login", isLoggedIn, redirectToAdmin);
+
+    app.use(
+      adminBro.options.rootPath,
+      (req, res, next) => {
+        console.log(setTrue);
+        if (setTrue) {
+          // setTrue = false;
+          return next();
+        }
+        const err = new Error("Please Provide email or password");
+        err.status = 401;
+        next(err);
+      },
+      router
+    );
 
     //Starting the server on port 8000.
     app.listen(port, () => {

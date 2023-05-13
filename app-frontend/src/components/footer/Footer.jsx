@@ -148,24 +148,26 @@ function Footer() {
             intimate gatherings of a few people to large-scale events with
             hundreds of attendees
           </p>
-          <a href="www.facebook.com">
-            <img src="../images/Facebook_Logo.png.webp" alt="" width="100" />
-          </a>
-          <a href="www.instagram.com">
-            <img
-              src="../images/Instagram_logo_2016.svg.webp"
-              alt=""
-              width="100"
-            />
-          </a>
-          <a href="www.twitter.com">
-            <img
-              class="twitter"
-              src="../images/twitter.png"
-              alt=""
-              width="100"
-            />
-          </a>
+          <article className="hide-element">
+            <a href="www.facebook.com">
+              <img src="../images/Facebook_Logo.png.webp" alt="" width="100" />
+            </a>
+            <a href="www.instagram.com">
+              <img
+                src="../images/Instagram_logo_2016.svg.webp"
+                alt=""
+                width="100"
+              />
+            </a>
+            <a href="www.twitter.com">
+              <img
+                class="twitter"
+                src="../images/twitter.png"
+                alt=""
+                width="100"
+              />
+            </a>
+          </article>
         </section>
         <section className="footer-right">
           <section className="footer-links">

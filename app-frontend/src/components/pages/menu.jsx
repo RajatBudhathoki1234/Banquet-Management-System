@@ -142,112 +142,123 @@ const Menu = () => {
         </div>
       </div>
       <div className="banquetMenu-container">
-        <section className="breakfast-section menu-section">
-          <label htmlFor="breakfast">Breakfast</label>
-          {breakfast.map((item, index) => {
-            return (
-              <div key={index}>
-                <input
-                  type="text"
-                  id="breakfast"
-                  name="breakfast"
-                  placeholder="breakfast"
-                  onChange={(e) => handleChange(e, index)}
-                />
+        <h1
+          style={{
+            fontSize: "50px",
+            color: "black",
+            fontFamily: "Pacifico",
+          }}
+        >
+          Add Menu
+        </h1>
+        <section className="banquet-menu-display-flex">
+          <section className="breakfast-section menu-section">
+            <label htmlFor="breakfast">Breakfast</label>
+            {breakfast.map((item, index) => {
+              return (
+                <div key={index}>
+                  <input
+                    type="text"
+                    id="breakfast"
+                    name="breakfast"
+                    placeholder="breakfast"
+                    onChange={(e) => handleChange(e, index)}
+                  />
 
-                <button
-                  className="menu-close-btn"
-                  name="breakfast"
-                  onClick={(e) => {
-                    removeInput(e, index);
-                  }}
-                >
-                  X
-                </button>
-              </div>
-            );
-          })}
-          <button
-            className="addMenu-btn"
-            name="breakfast"
-            onClick={(e) => {
-              handleAddMenu(e);
-            }}
-          >
-            Add Breakfast
-          </button>
-        </section>
+                  <button
+                    className="menu-close-btn"
+                    name="breakfast"
+                    onClick={(e) => {
+                      removeInput(e, index);
+                    }}
+                  >
+                    X
+                  </button>
+                </div>
+              );
+            })}
+            <button
+              className="addMenu-btn"
+              name="breakfast"
+              onClick={(e) => {
+                handleAddMenu(e);
+              }}
+            >
+              Add Breakfast
+            </button>
+          </section>
 
-        <section className="dinner-section  menu-section">
-          <label htmlFor="breakfast">Dinner</label>
-          {dinner.map((item, index) => {
-            return (
-              <div key={index}>
-                <input
-                  type="text"
-                  id="dinner"
-                  name="dinner"
-                  placeholder="dinner"
-                  onChange={(e) => handleChange(e, index)}
-                />
+          <section className="dinner-section  menu-section">
+            <label htmlFor="breakfast">Dinner</label>
+            {dinner.map((item, index) => {
+              return (
+                <div key={index}>
+                  <input
+                    type="text"
+                    id="dinner"
+                    name="dinner"
+                    placeholder="dinner"
+                    onChange={(e) => handleChange(e, index)}
+                  />
 
-                <button
-                  className="menu-close-btn"
-                  name="dinner"
-                  onClick={(e) => {
-                    removeInput(e, index);
-                  }}
-                >
-                  X
-                </button>
-              </div>
-            );
-          })}
-          <button
-            className="addMenu-btn"
-            name="dinner"
-            onClick={(e) => {
-              handleAddMenu(e);
-            }}
-          >
-            Add Dinner
-          </button>
-        </section>
+                  <button
+                    className="menu-close-btn"
+                    name="dinner"
+                    onClick={(e) => {
+                      removeInput(e, index);
+                    }}
+                  >
+                    X
+                  </button>
+                </div>
+              );
+            })}
+            <button
+              className="addMenu-btn"
+              name="dinner"
+              onClick={(e) => {
+                handleAddMenu(e);
+              }}
+            >
+              Add Dinner
+            </button>
+          </section>
 
-        <section className="desert-section  menu-section">
-          <label htmlFor="desert">Desert</label>
-          {desert.map((item, index) => {
-            return (
-              <div key={index}>
-                <input
-                  type="text"
-                  id="desert"
-                  name="desert"
-                  placeholder="desert"
-                  onChange={(e) => handleChange(e, index)}
-                />
+          <section className="desert-section  menu-section">
+            <label htmlFor="desert">Desert</label>
+            {desert.map((item, index) => {
+              return (
+                <div key={index}>
+                  <input
+                    type="text"
+                    id="desert"
+                    name="desert"
+                    placeholder="desert"
+                    onChange={(e) => handleChange(e, index)}
+                  />
 
-                <button
-                  name="desert"
-                  className="menu-close-btn"
-                  onClick={(e) => {
-                    removeInput(e, index);
-                  }}
-                >
-                  X
-                </button>
-              </div>
-            );
-          })}
-          <button
-            className="addMenu-btn"
-            name="desert"
-            onClick={(e) => {
-              handleAddMenu(e);
-            }}
-          >
-            Add Desert
-          </button>
+                  <button
+                    name="desert"
+                    className="menu-close-btn"
+                    onClick={(e) => {
+                      removeInput(e, index);
+                    }}
+                  >
+                    X
+                  </button>
+                </div>
+              );
+            })}
+            <button
+              className="addMenu-btn"
+              name="desert"
+              onClick={(e) => {
+                handleAddMenu(e);
+              }}
+            >
+              Add Desert
+            </button>
+          </section>
         </section>
         <div style={{ position: "relative" }}>
           {responseMessage.sucess && (

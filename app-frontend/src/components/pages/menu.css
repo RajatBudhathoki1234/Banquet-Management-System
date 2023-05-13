@@ -60,3 +60,15 @@
   border-radius: 10px;
   background-color: red;
 }
+
+.banquet-menu-display-flex {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 950px) {
+  .banquet-menu-display-flex {
+    flex-direction: column;
+  }
+}
