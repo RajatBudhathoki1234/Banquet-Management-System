@@ -153,7 +153,7 @@ const Menu = () => {
         </h1>
         <section className="banquet-menu-display-flex">
           <section className="breakfast-section menu-section">
-            <label htmlFor="breakfast">Breakfast</label>
+            <label htmlFor="breakfast">Starters</label>
             {breakfast.map((item, index) => {
               return (
                 <div key={index}>
@@ -161,7 +161,7 @@ const Menu = () => {
                     type="text"
                     id="breakfast"
                     name="breakfast"
-                    placeholder="breakfast"
+                    placeholder="Starters"
                     onChange={(e) => handleChange(e, index)}
                   />
 
@@ -184,7 +184,7 @@ const Menu = () => {
                 handleAddMenu(e);
               }}
             >
-              Add Breakfast
+              Add Starters
             </button>
           </section>
 
@@ -197,7 +197,7 @@ const Menu = () => {
                     type="text"
                     id="dinner"
                     name="dinner"
-                    placeholder="dinner"
+                    placeholder="Dinner"
                     onChange={(e) => handleChange(e, index)}
                   />
 
@@ -233,7 +233,7 @@ const Menu = () => {
                     type="text"
                     id="desert"
                     name="desert"
-                    placeholder="desert"
+                    placeholder="Desert"
                     onChange={(e) => handleChange(e, index)}
                   />
 

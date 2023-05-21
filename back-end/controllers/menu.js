@@ -42,53 +42,53 @@ const createMenu = async (req, res) => {
         userId: req.signedCookies.userId,
       });
 
-      // //Sending email to created banquet person.
+      //Sending email to created banquet person.
 
-      // //Creating a medium to send email.
-      // let transporter = nodemailer.createTransport({
-      //   //Domain name.
-      //   service: "hotmail",
-      //   auth: {
-      //     //Your email
-      //     user: `${process.env.EMAIL}`,
-      //     //Your password
-      //     pass: `${process.env.PASSWORD}`,
-      //   },
-      // });
+      //Creating a medium to send email.
+      let transporter = nodemailer.createTransport({
+        //Domain name.
+        service: "hotmail",
+        auth: {
+          //Your email
+          user: `${process.env.EMAIL}`,
+          //Your password
+          pass: `${process.env.PASSWORD}`,
+        },
+      });
 
-      // //Contents of email.
-      // let mailConfiguration = await transporter.sendMail({
-      //   from: `${process.env.EMAIL}`,
-      //   to: `${adminData.email}`,
-      //   subject: "Banquet Created: Welcome to our Banquet System",
-      //   html: `<h3>Hello There, Thanks for promoting you platform with following details.</h3>
-      //   <p>
-      //   Banquet Name: ${banquet_name}
-      //   <br>
-      //   Banquet Description: ${banquet_description}
-      //   <br>
-      //   Location: ${banquet_location}
-      //   <br>
-      //   Banquet Price Per Plate: ${banquet_price}
-      //   <br>
-      //   Available Starters: ${breakfast}
-      //   <br>
-      //   Available MainCourse: ${dinner}
-      //   <br>
-      //   Availabe Desert: ${desert}
-      //   <br>
-      //   </p>`,
-      // });
+      //Contents of email.
+      let mailConfiguration = await transporter.sendMail({
+        from: `${process.env.EMAIL}`,
+        to: `${adminData.email}`,
+        subject: "Banquet Created: Welcome to our Banquet System",
+        html: `<h3>Hello There, Thanks for promoting your platform with following details.</h3>
+        <p>
+        Banquet Name: ${banquet_name}
+        <br>
+        Banquet Description: ${banquet_description}
+        <br>
+        Location: ${banquet_location}
+        <br>
+        Banquet Price Per Plate: ${banquet_price}
+        <br>
+        Available Starters: ${breakfast}
+        <br>
+        Available MainCourse: ${dinner}
+        <br>
+        Availabe Desert: ${desert}
+        <br>
+        </p>`,
+      });
 
-      // //Sending message to user email for verification.
-      // transporter.sendMail(mailConfiguration, function (error, info) {
-      //   //If not successful.
-      //   if (error) {
-      //     throw new CustomAPIError("Email not send");
-      //   }
-      //   //If successful.
-      //   console.log("Sent: " + info.response);
-      // });
+      //Sending message to user email for verification.
+      transporter.sendMail(mailConfiguration, function (error, info) {
+        //If not successful.
+        if (error) {
+          throw new CustomAPIError("Email not send");
+        }
+        //If successful.
+        console.log("Sent: " + info.response);
+      });
       return res.status(200).json("Sucess");
     }
     res.json("Unsucessfull");

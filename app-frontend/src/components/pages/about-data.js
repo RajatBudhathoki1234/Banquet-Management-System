@@ -3,7 +3,7 @@ const team = [
     id: 1,
     name: "Rajat Budhathoki",
     image: require("../images/rajat.jpg"),
-    position: "CEO, Co-founter",
+    position: "CEO, Co-founder",
     desc: "I want to take a moment to express my gratitude for your unwavering support and dedication to our organization. Your hard work and commitment to excellence have been instrumental in our success, and I am proud to have you all as a part of our team.",
   },
   {
@@ -36,7 +36,7 @@ const team = [
   },
   {
     id: 6,
-    name: "Sumi Shrestha",
+    name: "Suhana Shrestha",
     image: require("../images/Sobita-Gautam-1.jpg"),
     position: "Event Manager",
     desc: "An event manager is responsible for planning and executing events, such as conferences, weddings, trade shows, and other gatherings. ",

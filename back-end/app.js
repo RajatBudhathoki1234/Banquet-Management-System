@@ -78,11 +78,11 @@ const mongoose = require("mongoose");
 const authentication = require("express-authentication");
 const adminSchema = require("./models/admin");
 
-////////////////// To add new admin user in MongoDb /////////////////////////
+//////////////// To add new admin user in MongoDb /////////////////////////
 
 // const newUser = new adminSchema({
-//   email: "nimesh@gmail.com",
-//   password: "nimesh",
+//   email: "rajat@gmail.com",
+//   password: "rajat321",
 //   role: "admin",
 // });
 // newUser.save((err) => {

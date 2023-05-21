@@ -122,15 +122,11 @@ const DisplayMenu = () => {
       <div className="img-section">
         {/* <img src={require("../images/sub-banner.jpg")} alt="" /> */}
         <div className="img-content">
-          <h2 className="animate__animated animate__pulse">
-            List of Banquet and their Blogs
-          </h2>
+          <h2 className="animate__animated animate__pulse">Costumize Menu</h2>
           <p className="animate__animated animate__lightSpeedInLeft">
-            Are you looking for the perfect venue for your upcoming banquet, but
-            feeling overwhelmed by the endless options? Look no further! Our
-            blog has everything you need to know about planning the perfect
-            banquet, from choosing the ideal venue to creating a mouthwatering
-            menu that will leave your guests wanting more.
+            Welcome to our menu customization! We believe in providing a
+            personalized dining experience tailored to your preferences. Follow
+            the steps below to create your own unique menu.
           </p>
         </div>
       </div>

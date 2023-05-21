@@ -2,7 +2,7 @@ const people = [
   {
     id: 1,
     image: require("../images/rabi.png"),
-    name: "Rabi Lamcichanne",
+    name: "Rabi Lamichhanne",
     title: "Office Manager",
     quote:
       "The staff at this banquet went above and beyond to make sure our event was a success. From the moment we walked in, we were greeted with a warm welcome and excellent service. The food was delicious and the attention to detail was impressive. Thank you for making our experience so memorable!",

@@ -27,5 +27,4 @@ const contactSchema = mongoose.Schema({
     required: [true, "Please provide comment"],
   },
 });
-
 module.exports = mongoose.model("contact", contactSchema);

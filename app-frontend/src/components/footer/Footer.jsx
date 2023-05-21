@@ -146,7 +146,7 @@ function Footer() {
             sit-down meal and can be hosted at various locations such as hotels,
             conference centers, and restaurants. Banquets can range from
             intimate gatherings of a few people to large-scale events with
-            hundreds of attendees
+            hundreds of attendees.
           </p>
           <article className="hide-element">
             <a href="www.facebook.com">

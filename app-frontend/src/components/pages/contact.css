@@ -85,17 +85,18 @@
 }
 
 .sucess-popUp {
-  background-color: rgb(117, 255, 117);
+  background-color: white;
   border-radius: 20px;
   text-align: center;
   color: rgb(0, 0, 0);
+  padding: 0px 20px;
 }
 
 .pop-up-message {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1 rem;
   padding: 10px 0px;
   font-size: 15px;
   font-weight: 900;

@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    image: require("../images/gallery/2.jpg"),
+    image: require("../images/gallery/Star Banquet 2.jpg"),
     desc: "Home",
     auther: "Beatriz",
     read: "5 min read",
@@ -17,7 +17,7 @@ const data = [
     postedDate: "1 day ago",
     title: `Star Banquet`,
     text: `Welcome to The Star Banquet, the ultimate event venue for weddings, corporate events, social gatherings, and more. Our stunning ballroom can accommodate up to 500 guests and is equipped with the latest technology in lighting and sound. Our experienced event planners will work with you to create a customized menu, decor, and entertainment to make your event unforgettable. With over 10 years of experience, The Grand Ballroom is the perfect choice for your next event.`,
-    image: require("../images/gallery/3.jpg"),
+    image: require("../images/gallery/Star Banquet 3.jpg"),
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const data = [
     postedDate: "Feb 13",
     title: "Smart Palace",
     text: " The Smart Palace is a beautiful outdoor event venue, perfect for hosting weddings, corporate events, and social gatherings. Our lush garden setting can accommodate up to 200 guests and is equipped with a state-of-the-art sound system and lighting. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 20 years of experience, The Garden Terrace is the perfect choice for your next outdoor event.",
-    image: require("../images/gallery/4.jpg"),
+    image: require("../images/gallery/Star Banquet 4.jpg"),
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const data = [
     postedDate: "Feb 10",
     title: `Mystic Mountain`,
     text: `Step into Mystic Mountain and experience elegance and luxury like never before. Our sophisticated event venue can accommodate up to 350 guests and is equipped with a stunning crystal chandelier, creating the perfect ambiance for your event. Our experienced event planners will work with you to create a customized menu, decor, and entertainment that suits your style and preferences. With over 15 years of experience, The Crystal Room is the perfect choice for your next upscale event.`,
-    image: require("../images/gallery/7.jpg"),
+    image: require("../images/gallery/Ambaence 5.jpg"),
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const data = [
     postedDate: "Feb 9",
     title: `Park Village Resort`,
     text: `The Park Village Resort is a breathtaking waterfront event venue, perfect for weddings, corporate events, and social gatherings. Our panoramic views of the harbor create the perfect backdrop for your event, while our spacious ballroom can accommodate up to 400 guests. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 10 years of experience, The Harbor View is the perfect choice for your next waterfront event.`,
-    image: require("../images/gallery/8.jpg"),
+    image: require("../images/gallery/Star Banquet 6.jpg"),
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const data = [
     postedDate: "Feb 6",
     title: `Hotel Yak & Yeti`,
     text: `Step into Hotel Yak & Yeti and experience the magic of an outdoor event. Our beautiful pavilion can accommodate up to 500 guests and is equipped with state-of-the-art lighting and sound systems. Our experienced event planners will work with you to create a customized menu, decor, and entertainment that suits your style and preferences. With over 5 years of experience, The Starlight Pavilion is the perfect choice for your next outdoor event.`,
-    image: require("../images/gallery/9.jpg"),
+    image: require("../images/gallery/Star Banquet 7.jpg"),
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const data = [
     postedDate: "Feb 6",
     title: `Chandragiri Resort`,
     text: `The Chandragiri Resort is a stunning event venue, perfect for hosting weddings, corporate events, and social gatherings. Our historic building has been transformed into a modern event space, complete with the latest technology in lighting and sound. Our experienced event planners will work with you to create a customized menu and decor, ensuring that your event is a reflection of your personal style. With over 20 years of experience, The Renaissance Hall is the perfect choice for your next event.`,
-    image: require("../images/gallery/10.jpg"),
+    image: require("../images/gallery/Star Banquet 8.jpg"),
   },
 ];
 

@@ -155,7 +155,7 @@ const DisplayBanquet = ({ userId }) => {
                 <option value="Nepalgunj">Nepalgunj</option>
               </select>
             </div>
-
+            
             <form onSubmit={handleSearchBanquet}>
               <div
                 style={{

@@ -3,7 +3,6 @@ const bookedSchema = require("../models/book");
 
 //Importing jwt to create a token.
 const jwt = require("jsonwebtoken");
-
 const getBanquet = async (req, res) => {
   try {
     const { token } = req.params;
@@ -11,15 +10,16 @@ const getBanquet = async (req, res) => {
 
     const { date } = decoded;
 
-    const bookData = await bookedSchema.findOne({ date: date });
+    const bookedBanquets = await bookedSchema.find({ date: date });
 
-    if (bookData !== null) {
-      const banquetData = await banquetModel.find({
-        banquet_name: { $ne: bookData.banquetName },
-      });
-      return res.json(banquetData);
-    }
-    const banquetData = await banquetModel.find({});
+    const bookedBanquetNames = bookedBanquets.map(
+      (booking) => booking.banquetName
+    );
+
+    const banquetData = await banquetModel.find({
+      banquet_name: { $nin: bookedBanquetNames },
+    });
+
     res.json(banquetData);
   } catch (error) {
     console.log(error);

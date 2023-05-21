@@ -10,11 +10,11 @@ import { Footer } from "../";
 
 import "./home.css";
 
-import silderImage01 from "../images/home_slider/slider-img01.jpg";
+import silderImage01 from "../images/home_slider/Star Banquet 4.jpg";
 
-import silderImage02 from "../images/home_slider/slider-img02.jpg";
+import silderImage02 from "../images/home_slider/Ambaence 3.jpg";
 
-import silderImage03 from "../images/home_slider/slider-img03.jpg";
+import silderImage03 from "../images/home_slider/Ambaence 5.jpg";
 
 import review from "./review";
 
@@ -198,11 +198,13 @@ function HomePage({ checkLogin }) {
                       WHY CHOOSE OUR BANQUET SYSTEM
                     </h2>
                     <p>
-                      At Our Banquet System, we plan to make your event, worry
-                      free and fun. Take the stress of planning your special
-                      event off your shoulders by selecting the level of
-                      assistance you want. When it comes to managing and
-                      catering your own event,our team of expertise...
+                      When choosing a banquet system, consider factors such as
+                      its features, scalability, user-friendliness,
+                      customization options, integration capabilities, reporting
+                      and analytics, support and training, security measures,
+                      and overall cost. Reading reviews and seeking
+                      recommendations can also provide valuable insights from
+                      other professionals in the industry.
                     </p>
                     <div className="about-link">
                       <a href="about">
@@ -220,7 +222,7 @@ function HomePage({ checkLogin }) {
               </section>
             </section>
             <section className="heading-img">
-              <img src={require("../images/s3.jpg")} alt="buddha " />
+              <img src={require("../images/Ambaence 5.jpg")} alt="buddha " />
             </section>
           </section>
           {/* End of second section */}
